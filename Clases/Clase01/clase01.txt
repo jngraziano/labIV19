@@ -1,0 +1,26 @@
+2 trabajos practicos
+
+1 sala de juegos
+2 algo parecido a la comanda
+
+se puede guardar en firebase
+
+Crear una clase:
+EJ
+ng g class clase/usuario
+
+angular -> tour of heroes explicacion
+
+
+https://github.com/octaviovillegas/TP-Sala-de-Juegos-ANGULAR-
+
+entregar antes de la primera clase
+se tiene que subir a una pagina web, se puede usar el de github, firebase, el que queramos
+cambiar formas de menu, los botones
+borrar todas las imagenes
+cambiar el formato si o si
+Clase 7 es el parcial
+ver capcha 
+
+clase:
+vimos formsmodule -> ngmodel, ngif, ngshow, ngclass, ngstyle, [hidden]
