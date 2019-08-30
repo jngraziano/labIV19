@@ -29,9 +29,6 @@ export class UsuarioComponent implements OnInit,AfterViewInit {
   constructor(private baseService: FirebaseService,
     private elementRef: ElementRef) {
 
-    // this.usuario = new Usuario();
-    // this.UsuarioGuardar = new Usuario();
-    // this.ListadoUs.listaUsuarios = [];
     
    }
 
@@ -62,6 +59,24 @@ export class UsuarioComponent implements OnInit,AfterViewInit {
   MuestroTabla(){
     this.muestroTabla = true;
     this.loginBOX = false;
+  }
+
+  LimpioBase(){
+    this.baseService.getItems('appTest/Usuarios').then(cargas => {
+      // let usuarioLogueado: any = JSON.parse(sessionStorage.getItem('Usuarios'));
+      // this.cargaCreditoBase = cargas.find(client => client.email == usuarioLogueado.email);
+
+      for (let i = 0; i < cargas.length; i++) {
+      
+          this.baseService.removeItem('appTest'+'/Usuarios', cargas[i].key );
+        
+        
+      }
+      // this.creoToastBorro();
+
+      window.location.reload();
+      // this.levantarCreditoDB();
+      });
   }
 
 
