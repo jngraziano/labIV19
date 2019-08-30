@@ -1,0 +1,17 @@
+<p>Email</p>
+<input type="text" [(ngModel)]="usuario.email">
+<p>Password</p>
+<input type="text" [(ngModel)]="usuario.password">
+<br>
+<br>
+<button (click)="AgregarUsuario()">Agregar</button>
+<br>
+<br>
+<button (click)="CambiarVista('grilla')" *ngIf="vista == 'lista'">Ver Grilla</button>
+<button (click)="CambiarVista('lista')"  *ngIf="vista == 'grilla'">Ver Listado</button>
+
+
+<h1 *ngIf="vista == 'lista'">Listado Usuarios</h1>
+<app-listado-de-usuarios [listadoUsuarios]="listadoUsuarios" *ngIf="vista == 'lista'"></app-listado-de-usuarios>
+<h1 *ngIf="vista == 'grilla'">Grilla Usuarios</h1>
+<app-grilla-usuarios [listadoUsuarios]="listadoUsuarios" *ngIf="vista == 'grilla'"></app-grilla-usuarios>

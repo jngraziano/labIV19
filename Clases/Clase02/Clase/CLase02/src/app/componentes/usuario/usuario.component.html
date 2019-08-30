@@ -1,0 +1,32 @@
+<body>
+        <div class="login-box">
+        
+         
+          <div class="textbox">
+         
+            <input type="email"  [(ngModel)]="usuario.nombre"  placeholder="nombre" >
+          </div>
+        
+          <div class="textbox" >
+         
+            <input  type="password" [(ngModel)]="usuario.clave"  placeholder="password" >
+          </div>
+        
+          <div id="buttons">
+          <button class="btn" (click)="CreoUsuario()">CREAR</button>
+        
+          </div>
+        </div>
+
+        <div *ngIf="muestroTabla">
+        <!-- <p app-listado-de-usuarios> -->
+     
+        <!-- <app-listado-de-usuarios [listadoUsuario]= "listadoUsuarios"></app-grilla-usuarios> -->
+            <app-listado-de-usuarios [listaUsuarios]= "listaUsuarios"></app-listado-de-usuarios>
+                <!-- <p >{{item.nombre}}</p>
+                <p >{{item.clave}}</p> -->
+            
+        <!-- </p> -->
+        <button class="btn" (click)="tablaFalse()">Sacar tabla</button>
+        </div>
+        </body>

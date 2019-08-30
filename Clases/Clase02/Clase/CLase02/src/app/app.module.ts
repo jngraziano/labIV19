@@ -4,17 +4,27 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ListadoDeUsuariosComponent } from './listado-de-usuarios/listado-de-usuarios.component';
+import { FormsModule } from "@angular/forms";
+import { UsuarioComponent } from './componentes/usuario/usuario.component';
+
+import { FirebaseService } from "../app/services/firebase.service";
+import { ComponentepruebaComponent } from './componentes/componenteprueba/componenteprueba.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ListadoDeUsuariosComponent
+    ListadoDeUsuariosComponent,
+    UsuarioComponent,
+    ComponentepruebaComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [
+    FirebaseService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
