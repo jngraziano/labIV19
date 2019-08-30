@@ -1,0 +1,29 @@
+<body >
+        <div class="login-box">
+            <!-- SPINNER -->
+          <!-- <ion-spinner *ngIf="spinner" name="crescent"></ion-spinner> -->
+                  
+          <h1>Login</h1>
+         
+          <div class="textbox">
+            <!-- <ion-icon  name="contact"></ion-icon> -->
+            <input type="email"  [(ngModel)]="usuario.email"  placeholder="email@email.com" >
+          </div>
+        
+          <div class="textbox" >
+            <!-- <ion-icon *ngIf="!spinner" name="lock"></ion-icon> -->
+            <input  type="password" [(ngModel)]="usuario.clave"  placeholder="password" >
+          </div>
+        
+          <div id="buttons">
+          <button class="btn" (click)="login()">INGRESAR</button>
+          <p *ngIf="error">Usuario Incorrecto</p>
+          <p *ngIf="success">Usuario Incorrecto</p>
+
+          <!-- <button  class="btn" id="creoSheetCss"  (click)="logeo()"> -->
+            <!-- Acceder como...
+          </button> -->
+          </div>
+        </div>
+        
+        </body>

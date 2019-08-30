@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { ListadoDeUsuariosComponent } from "../app/listado-de-usuarios/listado-de-usuarios.component";
 import { UsuarioComponent } from "../app/componentes/usuario/usuario.component";
+import { LoginComponent } from "../app/componentes/login/login.component";
 
 
 const routes: Routes = [
@@ -14,8 +15,11 @@ const routes: Routes = [
 { path: 'usuario',
   component: UsuarioComponent
 },
+{ path: 'login',
+  component: LoginComponent
+},
 { path: '', 
-  redirectTo: '/usuario', 
+  redirectTo: '/login', 
   pathMatch: 'full' }
 
 ];

@@ -1,13 +1,43 @@
-<div *ngFor="let item of listaUsuarios">
+<header>
+   
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    
+   
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</header>
+<!-- <div > -->
 
-    <p >{{item.nombre}}</p>
-    <p >{{item.clave}}</p>
+    <table class="table  table-striped table-dark table-bordered table-hover" id="tablaID">
+        <thead>
+          <tr>
+          
+            <th  scope="col" class="col1">NOMBRE</th>
+            <th  scope="col" class="col2">CLAVE</th>
+            <!-- <th  scope="col" class="col3">APELLIDO</th>
+            <th  scope="col" class="col4">EDAD</th>
+            <th  scope="col" class="col5">SEXO</th> -->
+  
+          </tr>
+      </thead>
+  
+          <tbody id="tBodyTable"  *ngFor="let item of listaUsuarios">
+              <tr> 
+            
+                    <td>{{item.email}}</td>
+                    <td>{{item.clave}}</td>
+
+               
+              </tr> 
+          
+             </tbody>
+            </table>
+  
+ 
 
 
-
-</div>
+<!-- </div> -->
 
 <!-- <!DOCTYPE html>
 <html>

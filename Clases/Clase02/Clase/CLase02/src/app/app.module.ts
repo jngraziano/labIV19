@@ -9,13 +9,15 @@ import { UsuarioComponent } from './componentes/usuario/usuario.component';
 
 import { FirebaseService } from "../app/services/firebase.service";
 import { ComponentepruebaComponent } from './componentes/componenteprueba/componenteprueba.component';
+import { LoginComponent } from './componentes/login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ListadoDeUsuariosComponent,
     UsuarioComponent,
-    ComponentepruebaComponent
+    ComponentepruebaComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

@@ -1,16 +1,18 @@
+/* 
+
+$white-color: #fff;
+$height100: 100%; */
+
+
+
 
 
 body {
     margin: 0;
     padding: 0;
     font-family: sans-serif;
-    background-color: darkgrey;
+    background-color: #333;
     background-size: cover;
-}
-
- 
-.botonSalir{
-  margin-left: 22%;
 }
 
 .login-box {
@@ -20,7 +22,7 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     color: #fff;
-    background: darkslategray;
+    background: black;
     padding: 50px;
     border-radius: 20px;
 }
@@ -60,10 +62,12 @@ body {
     
 }
 
+button{
+    background-color: black;
+}
 
 
-
-.boton {
+.btn {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     width: 100%;
     background-color: transparent;
@@ -76,72 +80,25 @@ body {
     margin: 12px 0;
 }
 
+#creoSheetCss{
+    background-color: transparent;
+    border:  transparent; 
+    color: grey;
 
+}
 
-.boton:hover {
+.action-sheet-options, .action-sheet-group {
+    background: black;
+    color: white;
+}
+
+.btn:hover {
     background-color: orange;
     color: #000;
     transition: .5s;
 }
 
-.boton:active {
+.btn:active {
     background-color: #000;
     color: #fcaf50;
 }
-
-
-html {
-    /* font-family: 'Trebuchet MS'; */
-    /* font-family: 'Arial'; */
-    -webkit-text-size-adjust: 100%;
-        -ms-text-size-adjust: 100%;
-        /* font-style: oblique; */
-       
-       
-        
-  }
-  thead{
-    background-color: black;
-  }
-  img{
-    border-radius: 10%;
-  }
-
- 
-  .spinner{
-   /* background-color: #424242;
-    display: none;
-     width: 150px;
-    height: 150px;
-   */
-   
-    position: fixed; 
-    top: 50%;
-    left: 50%;
-    margin-top: -50px;
-    margin-left: -100px;
-
-    border: 16px solid #f3f3f3;
-    border-radius: 50%;
-    border-top: 16px solid #3498db;
-    width: 120px;
-    height: 120px;
-    -webkit-animation: spin 2s linear infinite; /* Safari */
-    animation: spin 2s linear infinite;
-  }
-  
-  @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-  }
-
-.modal-header,.modal-body,.modal-footer {
-    background-color: lightgrey;
-  }
-
-  .btnCerrar{
-    float: right;
-    right:-15px; 
-    top:-40px; 
-  }
-  

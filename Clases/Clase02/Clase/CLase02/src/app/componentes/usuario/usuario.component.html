@@ -1,32 +1,176 @@
-<body>
-        <div class="login-box">
-        
-         
-          <div class="textbox">
-         
-            <input type="email"  [(ngModel)]="usuario.nombre"  placeholder="nombre" >
-          </div>
-        
-          <div class="textbox" >
-         
-            <input  type="password" [(ngModel)]="usuario.clave"  placeholder="password" >
-          </div>
-        
-          <div id="buttons">
-          <button class="btn" (click)="CreoUsuario()">CREAR</button>
-        
-          </div>
-        </div>
+<header>
+   
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Usuarios</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <div *ngIf="muestroTabla">
+    <!-- SCRIPTS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</header>
+<body>
+
+      
+
+        <!-- <div *ngIf="muestroTabla"> -->
         <!-- <p app-listado-de-usuarios> -->
      
         <!-- <app-listado-de-usuarios [listadoUsuario]= "listadoUsuarios"></app-grilla-usuarios> -->
-            <app-listado-de-usuarios [listaUsuarios]= "listaUsuarios"></app-listado-de-usuarios>
+          
                 <!-- <p >{{item.nombre}}</p>
                 <p >{{item.clave}}</p> -->
             
         <!-- </p> -->
-        <button class="btn" (click)="tablaFalse()">Sacar tabla</button>
+        <!-- <button class="btn" (click)="tablaFalse()">Sacar tabla</button> -->
+        <!-- </div> -->
+
+
+
+
+
+
+
+
+        <nav class="navbar navbar-sm navbar-dark bg-dark">
+            <div class="container-fluid">
+    
+              <div class="navbar-header" id="navHeader">
+                  <!-- href="#" -->
+                      <a class="navbar-brand" style="color:white" (click)="MuestroTabla()" >Listado de personas</a>
+              </div>
+                    
+              <!-- data-toggle="modal" data-target="#myModal" id="addPopup" -->
+            <button class="btn btn-outline-success" (click)=MuestroLoginBOX()>Agregar usuario
+              <i class="glyphicon glyphicon-plus"></i>
+            </button>
+            </div>
+        </nav>
+        
+      <br>
+
+
+      <div class="login-box" *ngIf="loginBOX">
+          <button class="close" (click)="MuestroTabla()">&times;</button>
+        <br>
+         <h1>Agregar</h1>
+        
+          <div class="input-group mb-3">
+              
+             <input type="email" class="form-control" [(ngModel)]="usuario.email"  placeholder="email@email.com" required >
+          
+          </div>
+          
+          <div class="input-group mb-3">
+         
+            <input  type="password" class="form-control" [(ngModel)]="usuario.clave"  placeholder="password" required>
+  
         </div>
-        </body>
+          <!-- <div class="btn-group" role="group"> -->
+            <button class="btn btn-outline-success btn-block" (click)="CreoUsuario()">CREAR</button>
+
+          <!-- </div> -->
+          <!-- btn btn-outline-danger botonSalir -->
+         
+        </div>
+
+
+    
+      
+    <div class="container" *ngIf="muestroTabla">
+    <br>
+      <!-- <div id="divTable"> -->
+          
+                <app-listado-de-usuarios [listaUsuarios]= "listaUsuarios"></app-listado-de-usuarios>
+           
+
+           
+      <!-- </div> -->
+    
+    
+    <!-- DIV OCULTO 1 (agregar) -->
+      <!-- <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+          <div class="modal-content" id="divOculto1">
+    
+            <div class="modal-header">
+          
+              <h5 class="modal-title">Datos de la persona</h5>
+              <button class="close"  data-dismiss="modal">&times;</button>
+            </div>
+    
+            <div class="modal-body">
+             
+              <div class="form-group">
+                  <label for="usr">ID:</label><br>
+                  <input type="text" id="idA" disabled>
+                </div>
+         
+              <div class="form-group">
+                <label for="usr">Nombre:</label><br>
+                <input type="text" id="nombreA" placeholder="Ingrese nombre...">
+              </div>
+    
+        
+                 <div class="form-group">
+                    <label for="">Apellido:</label><br>
+                    <input type="text" id="apellidoA" placeholder="Ingrese apellido...">
+                  </div>
+    
+                
+                 <div class="form-group">
+                  <label for="">Edad:</label><br>
+                  <input type="number" id="edadA" placeholder="Ingrese edad...">
+                </div>
+    
+           
+            
+              <div id="divSexo">
+              <label for="labelSexo">Sexo:</label>
+              <select name="selectSexo" id="selectSexo">
+                  <option value="MASCULINO" class="selectedBox" selected>Masculino</option>
+                  <option value="FEMENINO" class="selectedBox">Femenino</option>
+              
+              </select>
+             </div>
+    
+              <br>
+            
+              
+            </div> -->
+    
+            
+    
+            <!-- <div class="modal-footer">
+               
+                <button class="btn btn-outline-warning"id="btnModificar">Modificar</button>
+                <button class="btn btn-outline-danger"id="btnEliminar">Eliminar</button>
+              <button class="btn btn-outline-success"id="btnAgregar">Confirmar</button>
+              
+             
+            </div> -->
+    
+          <!-- </div> -->
+        <!-- </div> -->
+      </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <!-- SPINNER -->
+    <!-- <div class="spinner" id="spinner" style="display: none"> -->
+        <!-- <img src="./file/45.gif" alt=""> -->
+        <!-- <img class="spinner" src="https://btcspinner.io/img/spinners/default.png" alt=""> -->
+    <!-- </div> -->
+
+    <!-- </div> -->
+
+
+
+
+</body>
