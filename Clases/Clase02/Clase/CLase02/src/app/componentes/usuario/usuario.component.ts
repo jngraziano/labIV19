@@ -53,6 +53,8 @@ export class UsuarioComponent implements OnInit,AfterViewInit {
     this.baseService.addItem('appTest/Usuarios', this.usuario);
     this.loginBOX = false;
     this.muestroTabla = true;
+    this.usuario.email = "";
+    this.usuario.clave = "";
   }
 
 
