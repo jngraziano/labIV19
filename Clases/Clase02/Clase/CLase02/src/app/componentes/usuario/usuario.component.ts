@@ -81,8 +81,13 @@ export class UsuarioComponent implements OnInit,AfterViewInit {
     this.usuario.clave = this.usuarioEditar.clave;
     this.usuario = new Usuario();
     this.muestroTabla = true;
+<<<<<<< HEAD
     this.loginBOX = false;
    
+=======
+    this.usuario.email = "";
+    this.usuario.clave = "";
+>>>>>>> d874e8350b69d86a8da488d7983b54d5b150ad31
   }
 
 
