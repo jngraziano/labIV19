@@ -1,10 +1,10 @@
-import { Component, OnInit, Input, Output,AfterViewInit,ElementRef } from '@angular/core';
+import { Component, OnInit, Input, Output,AfterViewInit,ElementRef,EventEmitter } from '@angular/core';
 import { Usuario } from "../../clases/usuario";
-import { ListadoDeUsuariosComponent } from "../../listado-de-usuarios/listado-de-usuarios.component";
 
 
 import * as firebase from "firebase";
 import { FirebaseService } from "../../services/firebase.service";
+
 
 @Component({
   selector: 'app-usuario',
@@ -15,19 +15,22 @@ export class UsuarioComponent implements OnInit,AfterViewInit {
 
   
   public usuario : Usuario = new Usuario();
+  public usuarioEditar : Usuario = new Usuario();
 
   public muestroTabla : boolean = true;
 
   public loginBOX : boolean = false;
 
+  public modificar: boolean = false;
 
-  public listaUsuarios: Array<Usuario> = Array<Usuario>();
+  public listadoUsuarios: Array<Usuario> = Array<Usuario>();
 
-  public vista: string = 'grilla';
-
+  // public vista: string = 'grilla';
+  // @Output () seCreo:EventEmitter<any> = new EventEmitter();
 
   constructor(private baseService: FirebaseService,
     private elementRef: ElementRef) {
+
 
     
    }
@@ -38,25 +41,71 @@ export class UsuarioComponent implements OnInit,AfterViewInit {
     this.elementRef.nativeElement.ownerDocument.body.style.backgroundColor = 'darkgrey';
  }
   MuestroLoginBOX(){
-    this.muestroTabla = false;
+    this.modificar = false;
+    this.muestroTabla = true;
     this.loginBOX = true;
   }
 
-  CreoUsuario(){
- 
-    // console.log(this.loginBOX);
+  // CreoUsuario(){
+
+  //   const usuario = new Usuario();
+  //   usuario.email = this.usuario.email;
+  //   usuario.clave = this.usuario.clave;
+  //   this.listadoUsuarios  .push(usuario);
+  //   this.usuario = new Usuario();
+
+  //   this.loginBOX = false;
+  //   this.muestroTabla = true;
+  // }
+
+  agregarUsuario(){
+    // this.seCreo.emit(this.usuario);
+    // this.baseService.addItem('appTest/Usuarios', this.usuario);
+    this.modificar = false;
     const usuario = new Usuario();
     usuario.email = this.usuario.email;
     usuario.clave = this.usuario.clave;
-    this.listaUsuarios.push(usuario);
-
-    this.baseService.addItem('appTest/Usuarios', this.usuario);
+    this.listadoUsuarios.push(usuario);
+    this.usuario = new Usuario();
     this.loginBOX = false;
     this.muestroTabla = true;
   }
 
+  GuardarEditar() {
+    this.usuario = new Usuario();
+    this.loginBOX = false;
+  }
+
+  CancelarEditar() {
+    this.usuario.email = this.usuarioEditar.email;
+    this.usuario.clave = this.usuarioEditar.clave;
+    this.usuario = new Usuario();
+    this.muestroTabla = true;
+    this.loginBOX = false;
+   
+  }
+
+
+  EditarUsuario(usuario) {
+    this.loginBOX = true;
+    this.modificar = true;
+    this.usuarioEditar = new Usuario();
+    this.usuarioEditar.email = usuario.email;
+    this.usuarioEditar.clave = usuario.clave;
+    this.usuario = usuario;
+    
+  }
+
+  BorrarUsuario(usuario) {
+    const index = this.listadoUsuarios.indexOf(usuario);
+    this.listadoUsuarios.splice(index, 1);
+    this.usuario = new Usuario();
+  }
+ 
+
 
   MuestroTabla(){
+    this.modificar = false;
     this.muestroTabla = true;
     this.loginBOX = false;
   }
@@ -64,7 +113,6 @@ export class UsuarioComponent implements OnInit,AfterViewInit {
   LimpioBase(){
     this.baseService.getItems('appTest/Usuarios').then(cargas => {
       // let usuarioLogueado: any = JSON.parse(sessionStorage.getItem('Usuarios'));
-      // this.cargaCreditoBase = cargas.find(client => client.email == usuarioLogueado.email);
 
       for (let i = 0; i < cargas.length; i++) {
       

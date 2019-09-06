@@ -3,7 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { ListadoDeUsuariosComponent } from "../app/listado-de-usuarios/listado-de-usuarios.component";
 import { UsuarioComponent } from "../app/componentes/usuario/usuario.component";
 import { LoginComponent } from "../app/componentes/login/login.component";
-
+import { UsuarioListadoComponent } from "../app/componentes/usuario-listado/usuario-listado.component";
 
 const routes: Routes = [
 //   { path: 'firstpage',
@@ -18,8 +18,11 @@ const routes: Routes = [
 { path: 'login',
   component: LoginComponent
 },
+{ path: 'usuariolistado',
+  component: UsuarioListadoComponent
+},
 { path: '', 
-  redirectTo: '/login', 
+  redirectTo: '/usuariolistado', 
   pathMatch: 'full' }
 
 ];

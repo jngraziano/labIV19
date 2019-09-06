@@ -10,6 +10,7 @@ import { UsuarioComponent } from './componentes/usuario/usuario.component';
 import { FirebaseService } from "../app/services/firebase.service";
 import { ComponentepruebaComponent } from './componentes/componenteprueba/componenteprueba.component';
 import { LoginComponent } from './componentes/login/login.component';
+import { UsuarioListadoComponent } from './componentes/usuario-listado/usuario-listado.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { LoginComponent } from './componentes/login/login.component';
     ListadoDeUsuariosComponent,
     UsuarioComponent,
     ComponentepruebaComponent,
-    LoginComponent
+    LoginComponent,
+    UsuarioListadoComponent
   ],
   imports: [
     BrowserModule,

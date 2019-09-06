@@ -40,9 +40,9 @@
               </div>
                     
               <!-- data-toggle="modal" data-target="#myModal" id="addPopup" -->
-              <button class="btn btn-outline-danger" (click)=LimpioBase()>Limpiar base
+              <!-- <button class="btn btn-outline-danger" (click)=LimpioBase()>Limpiar base 
                   <i class="glyphicon glyphicon-trash"></i>
-                </button>
+                </button> -->
             <button class="btn btn-outline-success" (click)=MuestroLoginBOX()>Agregar usuario
               <i class="glyphicon glyphicon-plus"></i>
             </button>
@@ -53,9 +53,11 @@
 
 
       <div class="login-box" *ngIf="loginBOX">
-          <button class="close" (click)="MuestroTabla()">&times;</button>
+          <button class="close" (click)="CancelarEditar()">&times;</button>
         <br>
-         <h1>Agregar</h1>
+         <h1 *ngIf="!modificar">Agregar</h1>
+         <h1 *ngIf="modificar">Modificar</h1>
+
         
           <div class="input-group mb-3">
               
@@ -65,11 +67,13 @@
           
           <div class="input-group mb-3">
          
-            <input  type="password" class="form-control" [(ngModel)]="usuario.clave"  placeholder="password" required>
+            <input  type="text" class="form-control" [(ngModel)]="usuario.clave"  placeholder="password" required>
   
         </div>
           <!-- <div class="btn-group" role="group"> -->
-            <button class="btn btn-outline-success btn-block" (click)="CreoUsuario()">CREAR</button>
+            <button class="btn btn-outline-success btn-block" *ngIf="!modificar" (click)="agregarUsuario()">CREAR</button>
+            <button (click)="GuardarEditar()" *ngIf="modificar" class="btn btn-outline-warning" >Guardar</button>
+            <button (click)="CancelarEditar()" *ngIf="modificar" class="btn btn-outline-primary" >Cancelar</button>
 
           <!-- </div> -->
           <!-- btn btn-outline-danger botonSalir -->
@@ -79,13 +83,17 @@
 
     
       <!-- CREO TABLA -->
+
+      <!--   -->
         <div class="container" *ngIf="muestroTabla">
           <br>
-          <app-listado-de-usuarios [listaUsuarios]= "listaUsuarios"></app-listado-de-usuarios>
-      
+          <!-- <app-listado-de-usuarios [listaUsuarios]= "listaUsuarios"></app-listado-de-usuarios> -->
+          <!-- <app-usuario-listado></app-usuario-listado> -->
+          <app-listado-de-usuarios [listadoUsuarios]="listadoUsuarios" (editarUsuario)="EditarUsuario($event)" (borrarUsuario)="BorrarUsuario($event)"></app-listado-de-usuarios>
+
         </div>
     
-    
+    <!-- AGREGO LOS EVENTOS QUE VIENEN DE LISTADO, usa un indexOf para eliminar o editarlo. -->
     
     
     

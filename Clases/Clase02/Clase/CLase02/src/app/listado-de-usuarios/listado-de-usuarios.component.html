@@ -22,11 +22,14 @@
           </tr>
       </thead>
   
-          <tbody id="tBodyTable"  *ngFor="let item of listaUsuarios">
+          <tbody id="tBodyTable"  *ngFor="let item of listadoUsuarios">
               <tr> 
             
                     <td>{{item.email}}</td>
                     <td>{{item.clave}}</td>
+                    <td><button class="btn btn-warning" (click)="editar(item)">Edit</button>
+                    <button class="btn btn-danger" (click)="borrar(item)">Delete</button></td>
+
 
                
               </tr> 
