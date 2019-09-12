@@ -70,13 +70,10 @@
             <input  type="text" class="form-control" [(ngModel)]="usuario.clave"  placeholder="password" required>
   
         </div>
-          <!-- <div class="btn-group" role="group"> -->
+         
             <button class="btn btn-outline-success btn-block" *ngIf="!modificar" (click)="agregarUsuario()">CREAR</button>
             <button (click)="GuardarEditar()" *ngIf="modificar" class="btn btn-outline-warning" >Guardar</button>
             <button (click)="CancelarEditar()" *ngIf="modificar" class="btn btn-outline-primary" >Cancelar</button>
-
-          <!-- </div> -->
-          <!-- btn btn-outline-danger botonSalir -->
          
         </div>
 

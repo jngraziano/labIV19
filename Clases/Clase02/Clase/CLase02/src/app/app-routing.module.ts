@@ -22,7 +22,7 @@ const routes: Routes = [
   component: UsuarioListadoComponent
 },
 { path: '', 
-  redirectTo: '/usuariolistado', 
+  redirectTo: '/usuario', 
   pathMatch: 'full' }
 
 ];
