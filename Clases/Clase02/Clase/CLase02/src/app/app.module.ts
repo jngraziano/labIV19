@@ -11,6 +11,16 @@ import { FirebaseService } from "../app/services/firebase.service";
 import { ComponentepruebaComponent } from './componentes/componenteprueba/componenteprueba.component';
 import { LoginComponent } from './componentes/login/login.component';
 import { UsuarioListadoComponent } from './componentes/usuario-listado/usuario-listado.component';
+import { MihttpService } from './services/mihttp.service'; 
+import { Response , Http } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
+import {HttpModule} from '@angular/http';
+
+
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+
+
 
 @NgModule({
   declarations: [
@@ -19,14 +29,19 @@ import { UsuarioListadoComponent } from './componentes/usuario-listado/usuario-l
     UsuarioComponent,
     ComponentepruebaComponent,
     LoginComponent,
-    UsuarioListadoComponent
+    UsuarioListadoComponent,
+  
   ],
   imports: [
+    HttpModule,
+    HttpClientModule,
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     FormsModule
   ],
   providers: [
+    MihttpService,
     FirebaseService
   ],
   bootstrap: [AppComponent]

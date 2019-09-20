@@ -18,6 +18,7 @@ export class LoginComponent implements OnInit {
   public usuario : Usuario = new Usuario();
   public error: boolean = false;
   public success: boolean = false;
+  spinner:boolean;
 
 
   // cuenta: { usuario: string, password: string } = {
@@ -33,32 +34,32 @@ export class LoginComponent implements OnInit {
 
   login(){
     // this.spinner = true; 
-    this.baseService.getItems("appTest/Usuarios").then(users => {
-      // setTimeout(() => this.spinner = false, 2000);
+
+    this.router.navigateByUrl('/usuario'); 
+
+    // this.baseService.getItems("appTest/Usuarios").then(users => {
+    //   // setTimeout(() => this.spinner = false, 4000);
      
-      // console.log(this.usuarios);
-      // console.log(users);
+   
+    //   this.usuarios = users;
 
-      this.usuarios = users;
+    //   let usuarioLogueado = this.usuarios.find(elem => (elem.email == this.usuario.email && elem.clave == this.usuario.clave));
+    //   console.log(usuarioLogueado);
+    
+    //   if (usuarioLogueado !== undefined) {
+    //     this.error = false;
+    //     this.success = true;
+    //     sessionStorage.setItem('Usuarios', JSON.stringify(usuarioLogueado));
 
-      let usuarioLogueado = this.usuarios.find(elem => (elem.email == this.usuario.email && elem.clave == this.usuario.clave));
-      console.log(usuarioLogueado);
-      // console.log(usuarioLogueado);
-      // console.log(this.cuenta);
-      if (usuarioLogueado !== undefined) {
-        this.error = false;
-        this.success = true;
-        sessionStorage.setItem('Usuarios', JSON.stringify(usuarioLogueado));
 
-        // this.events.publish('usuarioLogueado', usuarioLogueado.perfil);       
-        // this.creoToast(true);
         
-        this.router.navigateByUrl('/usuario'); 
-      }
-      else{
-        this.error = true;
-      }
-    });
+    //     this.router.navigateByUrl('/usuario'); 
+       
+    //   }
+    //   else{
+    //     this.error = true;
+    //   }
+    // });
   }
 
 }
