@@ -24,7 +24,7 @@ export class MihttpService {
   public httpPostP( url: string, objeto: any )
   {
     return this.http
-    .get( url )
+    .post(url,objeto )
     .subscribe( data => {
       console.log( data );
       return data;
