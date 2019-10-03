@@ -1,0 +1,41 @@
+<ng-container>
+	<table class="table table-condensed" border="1" style="float:left; min-width: 40%; margin: 2.5%;">
+	  <caption><h1>Listado de productos</h1></caption>
+	  <thead>
+	    <tr>
+	      <th>Id</th>
+	      <th>descripcion</th>
+	      <th>Tipo</th>
+	      <th>fechavencimiento</th>
+	      <th>Foto</th>
+          <!--<th>Mostrar</th>-->
+	    </tr>
+	  </thead>
+	  <tbody>
+	    <tr *ngFor="let producto of productos">
+	      <td>{{producto.id}} </td>
+	      <td>{{producto.descripcion}} </td> 
+	      <td>{{producto.tipo}} </td> 
+	      <td>{{producto.fechavencimiento}} </td>       
+	      <td *ngIf="producto.RutaDeFoto"><img src='assets/fotos/{{producto.RutaDeFoto}}.jpg' width="50px"/> </td>
+	      <td *ngIf="!producto.RutaDeFoto"><img src='assets/fotos/default.png' width="50px"/> </td>
+	      <!--<td><button (click)="enviar(producto)">Mostrar</button> </td>-->
+	    </tr>
+	  </tbody>
+	</table>
+	<!-- <div style="float:right; min-width: 40%; margin: 2.5%;">
+		<div style="padding: 6%;">Editar: <input id="mostrarFormAlta" type="checkbox" name="mostrarFormAlta" (change)="mostrarForm($event)"><br><br></div>
+		<div id="formAlta" style="visibility: hidden; border:solid; padding: 2%;">
+			descripcion:<br><input type="text" name="descripcionproducto" id="descripcionproducto" [(ngModel)]="producto.descripcion"><br>
+			Sexo:<br>
+			<select name="sexoproducto" id="sexoproducto" [(ngModel)]="producto.sexo">
+				<option value="" disabled>Seleccione</option>
+				<option value="femenino">femenino</option>
+				<option value="masculino">masculino</option>
+			</select><br>
+			Mail:<br><input type="text" name="mailproducto" id="mailproducto" [(ngModel)]="producto.mail"><br>
+			Password:<br><input type="password" name="passwordproducto" id="passwordproducto" [(ngModel)]="producto.password"><br><br><br>
+			<button (click)="guardar()">Guardar</button>
+		</div>
+	</div>-->
+</ng-container>

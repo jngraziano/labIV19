@@ -1,0 +1,49 @@
+<ng-container>
+	<table class="table table-condensed" border="1" style="float:left; min-width: 40%; margin: 2.5%;">
+	  <caption><h1>Listado de productos</h1></caption>
+	  <thead>
+	    <tr>
+	      <th>Id</th>
+	      <th>Descripcion</th>
+	      <th>Tipo</th>
+		  <th>fechavencimiento</th>
+		  <th>Precio</th>
+	      <th>Foto</th>
+	      <th>Borrar</th>
+          <!--<th>Mostrar</th>-->
+	    </tr>
+	  </thead>
+	  <tbody>
+			<!-- [ngStyle]="{ 'background-color': producto.sexo == 'femenino' ? 'pink' : '' } "-->
+	    <tr *ngFor="let producto of listadoDeproductos" >
+	      <td>{{producto.id}} </td>
+	      <td>{{producto.descripcion}} </td> 
+	      <td appPerroGato [tipo]=producto.tipo>{{producto.tipo}} </td> 
+		  <td>{{producto.fechavencimiento}} </td>  
+	      <td>{{producto.precio}} </td>       		       
+	      <td *ngIf="producto.RutaDeFoto"><img src='assets/fotos/{{producto.RutaDeFoto}}.jpg' width="50px"/> </td>
+	      <td *ngIf="!producto.RutaDeFoto"><img src='assets/fotos/default.png' width="50px"/> </td>
+	      <td><app-borrar-mascota [id]="producto.id"></app-borrar-mascota></td>
+	      <!--<td><button (click)="enviar(producto)">Mostrar</button> </td>-->
+	    </tr>
+	  </tbody>
+	</table>
+
+
+	<div style="float:right; min-width: 40%; margin: 2.5%;">
+		<div style="padding: 6%;">Editar: <input id="mostrarFormAlta" type="checkbox" name="mostrarFormAlta" (change)="mostrarForm($event)"><br><br></div>
+		<div id="formAlta" style="visibility: hidden; border:solid; padding: 2%;">
+			Descripcion:<br><input type="text" name="descripcionproducto" id="descripcionproducto" [(ngModel)]="producto.descripcion"><br>
+			Tipo:<br>
+			<select name="sexoproducto" id="sexoproducto" [(ngModel)]="producto.tipo">
+				<option value="" disabled>Seleccione</option>
+				<option value="solido">solido</option>
+				<option value="liquido">liquido</option>
+			</select><br>
+			Precio: <br><input type="number" name="precio" id="precio" [(ngModel)]="producto.precio">
+			<br>
+			Fecha de Vencimiento:<br><input type="date" name="fechavencimiento" id="fechavencimiento" [(ngModel)]="producto.fechavencimiento"><br>
+			<button (click)="guardar()">Guardar</button>
+		</div>
+	</div>
+</ng-container>
