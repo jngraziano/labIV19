@@ -23,7 +23,9 @@ const routes: Routes = [
   component: ComponentepruebaComponent
 },
 { path: 'listaMaterias',
-  component: ListaMateriasComponent
+  component: ListaMateriasComponent,
+  data: {animation: 'homeusuario'}
+
 },
 { path: 'usuario',
   component: UsuarioComponent, canActivate: [ValidarRutaServiceService],
@@ -46,7 +48,9 @@ const routes: Routes = [
   data: {animation: 'homelogin'}
 },
 { path: 'usuariolistado',
-  component: UsuarioListadoComponent
+  component: UsuarioListadoComponent,
+  data: {animation: 'homeusuario'}
+
 },
 { path: '', 
   redirectTo: '/login', 

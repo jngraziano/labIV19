@@ -3,3 +3,25 @@
     text-align: center; 
     margin-top: 5%;
 }
+
+
+.divOculto{
+   
+    position: fixed;
+    bottom:10%;
+    right:40%;
+    height: 75%;
+    text-align: center;
+    margin: 2%;
+    background-color:  rgb(217, 239, 248);
+    border: 2px solid black;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  }
+
+
+  .btnCerrar{
+    float: right;
+    right:-15px; 
+    top:-40px; 
+  }
