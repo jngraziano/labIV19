@@ -98,10 +98,10 @@ export class LoginComponent implements OnInit {
 
             break;
             case "alumno": 
-            this.router.navigateByUrl('/usuario'); 
+            this.router.navigateByUrl('/listaMaterias'); 
             break;
             case "profesor": 
-            this.router.navigateByUrl('/profesor'); 
+            this.router.navigateByUrl('/listaMaterias'); 
             break;
           default:
             this.router.navigateByUrl('/login'); 

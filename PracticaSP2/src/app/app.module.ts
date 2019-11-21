@@ -24,6 +24,13 @@ import { HeaderComponent } from './componentes/header/header.component';
 import { TemadarkDirective } from './directivas/temadark.directive';
 import { ProfesorComponent } from './componentes/profesor/profesor.component';
 import { AdminComponent } from './componentes/admin/admin.component';
+import { EliminomailPipe } from './pipes/eliminomail.pipe';
+import { BotonesSombraRedDirective } from './directivas/botones-sombra-red.directive';
+import { LetraYcolorDirective } from './directivas/letra-ycolor.directive';
+import { InscripcionComponent } from './componentes/inscripcion/inscripcion.component';
+import { ListaMateriasComponent } from './componentes/lista-materias/lista-materias.component';
+import { ChatComponent } from './componentes/chat/chat.component';
+import { LoscuposDirective } from './directivas/loscupos.directive';
 
 
 
@@ -40,6 +47,13 @@ import { AdminComponent } from './componentes/admin/admin.component';
     TemadarkDirective,
     ProfesorComponent,
     AdminComponent,
+    EliminomailPipe,
+    BotonesSombraRedDirective,
+    LetraYcolorDirective,
+    InscripcionComponent,
+    ListaMateriasComponent,
+    ChatComponent,
+    LoscuposDirective,
   
   ],
   imports: [

@@ -1,16 +1,5 @@
-<header>
-   
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Usuarios</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- SCRIPTS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-</header>
 <body>
-
-      
 
         <!-- <div *ngIf="muestroTabla"> -->
         <!-- <p app-listado-de-usuarios> -->
@@ -27,7 +16,6 @@
 
 
 
-<app-header></app-header>
 
 
 <!-- 
@@ -83,7 +71,7 @@
           <br>
           <!-- <app-listado-de-usuarios [listaUsuarios]= "listaUsuarios"></app-listado-de-usuarios> -->
           <!-- <app-usuario-listado></app-usuario-listado> -->
-          <app-listado-de-usuarios [listadoUsuarios]="listadoUsuarios" (editarUsuario)="EditarUsuario($event)" (borrarUsuario)="BorrarUsuario($event)"></app-listado-de-usuarios>
+          <app-listado-de-usuarios [listadoMaterias]="listadoMaterias" (editarUsuario)="EditarUsuario($event)" (borrarUsuario)="BorrarUsuario($event)"></app-listado-de-usuarios>
 
         </div>
     

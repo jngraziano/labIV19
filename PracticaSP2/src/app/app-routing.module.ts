@@ -7,6 +7,9 @@ import { UsuarioListadoComponent } from "../app/componentes/usuario-listado/usua
 import { ComponentepruebaComponent } from "../app/componentes/componenteprueba/componenteprueba.component";
 import { ProfesorComponent } from "../app/componentes/profesor/profesor.component";
 import { AdminComponent } from "../app/componentes/admin/admin.component";
+import { InscripcionComponent } from "../app/componentes/inscripcion/inscripcion.component";
+import { ListaMateriasComponent } from "../app/componentes/lista-materias/lista-materias.component";
+import { ChatComponent } from "../app/componentes/chat/chat.component";
 
 import { ValidarRutaServiceService } from './services/validar-ruta-service.service';
 
@@ -19,8 +22,15 @@ const routes: Routes = [
 { path: 'componenteprueba',
   component: ComponentepruebaComponent
 },
+{ path: 'listaMaterias',
+  component: ListaMateriasComponent
+},
 { path: 'usuario',
   component: UsuarioComponent, canActivate: [ValidarRutaServiceService],
+  children:[
+    {path:'inscripcion', component:InscripcionComponent},
+    {path: 'chat', component: ChatComponent}
+  ],
   data: {animation: 'homeusuario'}
 },
 { path: 'profesor',

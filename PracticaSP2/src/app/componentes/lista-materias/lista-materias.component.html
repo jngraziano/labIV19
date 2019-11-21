@@ -1,0 +1,7 @@
+<app-header></app-header>
+<app-usuario *ngIf="usuarioLogeado.perfil == 'alumno'"></app-usuario>
+
+<br>
+<br>
+<br>
+<app-profesor class="total" *ngIf="usuarioLogeado.perfil == 'profesor'"></app-profesor>
