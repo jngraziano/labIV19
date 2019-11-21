@@ -1,0 +1,21 @@
+<nav Temadark class="navbar navbar-expand-sm  ">
+        <div class="container-fluid">
+
+        <div class="navbar-header" id="navHeader">
+                <a letraYcolor class="navbar-brand" href="#">UTN Fra</a>
+                
+
+        </div>
+                <!-- <input type="button" value="Listado de materias Inscripto" routerLink="./listaMaterias" (click)="mostrar()"> -->
+               
+                <button class="active btn btn-warning " *ngIf="IngresoBool" (click)="mostrar()"><span class="fa fa-sign-out fa-lg"></span> Chat</button>
+
+        
+        <!-- <button id="btnAgregar" class="btn btn-outline-success">Agregar usuario</button>  -->
+        <h6 letraYcolor *ngIf="IngresoBool" >¡Hola {{nombre | eliminoMail }}!</h6>                        
+        <button  BotonesSombraRed *ngIf="IngresoBool" class="active btn btn-danger"   (click)="logout()" ><span class="fa fa-sign-out fa-lg"></span> Salir</button>
+
+    </div>          
+      </nav>
+   
+  <br>

@@ -1,0 +1,98 @@
+
+<body>
+
+        <!-- <div *ngIf="muestroTabla"> -->
+        <!-- <p app-listado-de-usuarios> -->
+     
+        <!-- <app-listado-de-usuarios [listadoUsuario]= "listadoUsuarios"></app-grilla-usuarios> -->
+          
+                <!-- <p >{{item.nombre}}</p>
+                <p >{{item.clave}}</p> -->
+            
+        <!-- </p> -->
+        <!-- <button class="btn" (click)="tablaFalse()">Sacar tabla</button> -->
+        <!-- </div> -->
+
+
+
+
+
+
+<!-- 
+        <nav class="navbar navbar-sm navbar-dark bg-dark">
+            <div class="container-fluid">
+    
+              <div class="navbar-header" id="navHeader">
+             
+                      <a class="navbar-brand" style="color:white" (click)="MuestroTabla()" >Listado de personas</a>
+              </div>
+                    
+             
+            <button class="btn btn-outline-success" (click)=MuestroLoginBOX()>Agregar usuario
+              <i class="glyphicon glyphicon-plus"></i>
+            </button>
+            </div>
+        </nav>
+        
+      <br> -->
+
+
+      <div class="login-box" *ngIf="loginBOX">
+          <button class="close" (click)="CancelarEditar()">&times;</button>
+        <br>
+         <h1 *ngIf="!modificar">Agregar</h1>
+         <h1 *ngIf="modificar">Modificar</h1>
+
+        
+          <div class="input-group mb-3">
+              
+             <input type="email" class="form-control" [(ngModel)]="usuario.email"  placeholder="email@email.com" required >
+          
+          </div>
+          
+          <div class="input-group mb-3">
+         
+            <input  type="text" class="form-control" [(ngModel)]="usuario.clave"  placeholder="password" required>
+  
+        </div>
+         
+            <button class="btn btn-outline-success btn-block" *ngIf="!modificar" (click)="agregarUsuario()">CREAR</button>
+            <button (click)="GuardarEditar()" *ngIf="modificar" class="btn btn-outline-warning" >Guardar</button>
+            <button (click)="CancelarEditar()" *ngIf="modificar" class="btn btn-outline-primary" >Cancelar</button>
+         
+        </div>
+
+
+    
+      <!-- CREO TABLA -->
+
+      <!--   -->
+        <div class="container" *ngIf="muestroTabla">
+          <br>
+          <!-- <app-listado-de-usuarios [listaUsuarios]= "listaUsuarios"></app-listado-de-usuarios> -->
+          <!-- <app-usuario-listado></app-usuario-listado> -->
+          <app-listado-de-usuarios [listadoMaterias]="listadoMaterias" (editarUsuario)="EditarUsuario($event)" (borrarUsuario)="BorrarUsuario($event)"></app-listado-de-usuarios>
+
+        </div>
+    
+    <!-- AGREGO LOS EVENTOS QUE VIENEN DE LISTADO, usa un indexOf para eliminar o editarlo. -->
+    
+    
+    
+    
+    
+    
+    
+    
+    <!-- SPINNER -->
+    <div class="spinner" id="spinner" style="display: none">
+        <!-- <img src="./file/45.gif" alt=""> -->
+        <!-- <img class="spinner" src="https://btcspinner.io/img/spinners/default.png" alt=""> -->
+    </div>
+
+    <!-- </div> -->
+
+
+
+
+</body>

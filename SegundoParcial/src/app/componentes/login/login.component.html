@@ -1,0 +1,50 @@
+<app-header></app-header>
+<body>
+    <div Temadark class="login-box">
+    <form novalidate [formGroup]="loginForm" (ngSubmit)="login()"  >
+       
+                  
+          <h1 >Login</h1>
+          <div class="textbox" >
+            <input type="email"  formControlName="email" name="email"   placeholder="email@email.com" >
+          </div>
+          <div class="textbox" >
+            <input  type="password" formControlName="clave" name="clave"  placeholder="password" >
+          </div>
+
+          <!-- CAPTCHA -->
+          <br>
+          <div data-theme="dark" #recaptcha style="transform:scale(0.77);-webkit-transform:scale(0.77);transform-origin:0 0;-webkit-transform-origin:0 0;"></div>               
+          <br>
+          <p *ngIf="captchaE">Acepte el captcha por favor.</p>
+          
+          <!-- FIN CAPTCHA -->
+
+          <!-- SPINNER -->
+          <div *ngIf="isLoading" class="d-flex justify-content-center">
+              <div class="spinner-border" role="status"></div>
+            </div>
+        <!-- FIN SPINNER -->
+         
+          <button type="submit" class="botonIngresar">INGRESAR</button>
+          <p *ngIf="error" style="color: white;">Usuario Incorrecto</p>
+          <!-- <p *ngIf="success">Usuario Incorrecto</p> -->
+         
+        
+        <br>
+               
+</form>
+<div class="botonCargaLogin">
+    <button class="btn btn-primary"(click)="LoginAlumno()" ><i class="fa fa-user"></i></button>
+      <button class="btn btn-secondary"(click)="LoginProfesor()" ><i class="fa fa-book"></i></button>
+      <button class="btn btn-danger"(click)="LoginAdmin()"><i class="fa fa-lock"></i></button>
+      <!-- <button class="btn btn-warning"(click)="LoginChopera()" ><i class="fa fa-beer"></i></button>
+      <button class="btn btn-success"(click)="LoginTragos()" ><i class="fa fa-glass"></i></button>
+      <button class="btn btn-info"(click)="LoginCocina()"><i class="fa fa-cutlery"></i></button>
+      <button class="btn btn-light"(click)="LoginCandy()" ><i class="fa fa-birthday-cake"></i></button> -->
+      <br>
+    </div>
+  </div>   
+
+        
+        </body>
