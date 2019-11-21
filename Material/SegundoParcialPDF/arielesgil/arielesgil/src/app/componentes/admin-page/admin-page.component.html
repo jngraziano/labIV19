@@ -1,0 +1,19 @@
+<app-header-mail></app-header-mail>
+<div *ngIf="!muestro">
+
+
+<input type="button" value="Alta Materia" routerLink="./alta" (click)="mostrar()">
+<br><br>
+
+<input type="button" value="Listado de materias" routerLink="./listaMaterias" (click)="mostrar()">
+<br><br>
+<input type="button" value="Listado de Usuarios" routerLink="./listaUsuarios" (click)="mostrar()">
+<br><br>
+<input type="button" value="Chat" routerLink="./chat" (click)="mostrar()">
+
+
+</div>
+<div *ngIf="muestro">
+<input type="button" value="Volver" (click)="mostrar2()" routerLink="./">
+</div>
+<router-outlet></router-outlet>

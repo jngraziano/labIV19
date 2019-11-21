@@ -1,0 +1,53 @@
+
+<h1>Lista de usuarios</h1>
+<table border="solid">
+  <thead>
+    <th>email</th>
+    <th>tipo</th>
+    <th>nombre</th>
+    
+
+    
+
+  </thead>
+  <tr *ngFor="let mascota of lista">
+    <td>{{mascota.email}}</td>
+    <td>{{mascota.tipo}}</td>
+    <td>{{mascota.nombre}}</td>
+   
+  </tr>
+</table>
+
+<br><br>
+  <div>
+filtrar por tipo
+<br><br>
+    <input type="button" value="filtrar por Administrador" (click)="listarTipo('administrador')">
+    <br>
+    <input type="button" value="filtrar por alumno" (click)="listarTipo('alumno')">
+    <br>
+    <input type="button" value="filtrar por profesor" (click)="listarTipo('profesor')">
+
+    <div *ngIf="mostrar">
+    <h1>Lista de usuarios filtrado por {{tipo}}</h1>
+<table border="solid">
+  <thead>
+    <th>email</th>
+    <th>tipo</th>
+    <th>nombre</th>
+    
+
+    
+
+  </thead>
+  <tr *ngFor="let mascota of lista2">
+    <td>{{mascota.email}}</td>
+    <td>{{mascota.tipo}}</td>
+    <td>{{mascota.nombre}}</td>
+   
+  </tr>
+</table>
+</div>
+  </div>
+  
+

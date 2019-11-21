@@ -1,0 +1,29 @@
+<h1>Alta de materia - Administrador</h1>
+
+<form [formGroup]="registroForm">
+  
+    Ingrese cuatrimestre: 
+    <input type="text" formControlName="cuatrimestre" id="cuatrimestre"[(ngModel)]="unaMateria.cuatrimestre" >
+    <br>
+    Ingrese nombre de la materia: 
+    <input type="text" formControlName="nombre" id="nombre"[(ngModel)]="unaMateria.nombre" >
+    <br>
+    Ingrese cupo: 
+    <input type="number"   formControlName="cupos" id="cupos" [(ngModel)]="unaMateria.cupos" >
+    <br>
+    seleccione Profesor 
+   <select  formControlName="profesor">
+     <option *ngFor="let profe of lista3" id="profesor" [value]="profe.email">{{profe.nombre}}-{{profe.email}}</option>
+
+   </select>
+    <br>
+    
+    <!--
+    <br>
+    Subir una foto
+    <input type="file"  id="foto" (change)="onUpload($event)" formControlName="foto"
+    <input type="hidden"  id="id" [(ngModel)]="unaMateria.id" formControlName="id">-->
+    <br><br>
+    <input type="button" value="Enviar" (click)="enviar()" [disabled]="!registroForm.valid">
+  
+  </form>

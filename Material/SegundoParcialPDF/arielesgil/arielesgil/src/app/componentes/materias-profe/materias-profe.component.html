@@ -1,0 +1,19 @@
+<table border="solid">
+  <thead>
+    <th>Nombre Materia</th>
+    <th>Cuatrimeste</th>
+    <th>Cupos</th>
+    
+
+    
+    <!--<th>foto</th>-->
+  </thead>
+  <tr *ngFor="let materia of lista">
+    <td>{{materia.nombre}}</td>
+    <td>{{materia.cuatrimestre}}</td>
+    <td>{{materia.cupos}}</td>
+    <!--<td><img [src]="imagenes([materia.foto]) || async"/></td>-->
+    
+  </tr>
+
+</table>
