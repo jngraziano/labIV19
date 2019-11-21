@@ -52,7 +52,7 @@ export class LoginComponent implements OnInit {
 
   ngOnInit() {
     this.addRecaptchaScript();
-
+    this.borrarSession();
     this.loginForm = this.formBuilder.group({
         email: ['', Validators.required],
         clave: ['', Validators.required]
@@ -60,11 +60,18 @@ export class LoginComponent implements OnInit {
 
   }
 
+  borrarSession(){
+    sessionStorage.removeItem("Usuarios");
+
+  }
+
   get datosForm() { return this.loginForm.controls; }
 
-
+  
   login(){
     this.isLoading = true; 
+    sessionStorage.removeItem("Usuarios");
+
 
     this.baseService.getItems("appTest/Usuarios").then(users => {
       // setTimeout(() => this.spinner = false, 4000);
@@ -83,28 +90,32 @@ export class LoginComponent implements OnInit {
           this.isLoading = false;
           this.captchaE = false;
           this.error = false;
-          this.success = true;
+        
 
         switch(usuarioLogueado.perfil){
-          case "administrador": 
-            this.router.navigate(['admin']);
+          case "admin": 
+          this.router.navigateByUrl('/admin'); 
+
             break;
             case "alumno": 
             this.router.navigateByUrl('/usuario'); 
             break;
             case "profesor": 
-            this.router.navigate(['profesor']);
+            this.router.navigateByUrl('/profesor'); 
             break;
           default:
-              this.router.navigate(['Login']);
+            this.router.navigateByUrl('/login'); 
               break;
         }
 
 
         }
         else{
+          this.error = false;
           this.isLoading = false;
           this.captchaE = true;
+          this.borrarSession();
+
         }
          
        
@@ -112,8 +123,8 @@ export class LoginComponent implements OnInit {
       else{
         this.isLoading = false;
         this.captchaE = false;
-
         this.error = true;
+        this.borrarSession(); 
 
       }
     });

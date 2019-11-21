@@ -22,6 +22,8 @@ import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './componentes/header/header.component';
 import { TemadarkDirective } from './directivas/temadark.directive';
+import { ProfesorComponent } from './componentes/profesor/profesor.component';
+import { AdminComponent } from './componentes/admin/admin.component';
 
 
 
@@ -36,6 +38,8 @@ import { TemadarkDirective } from './directivas/temadark.directive';
     UsuarioListadoComponent,
     HeaderComponent,
     TemadarkDirective,
+    ProfesorComponent,
+    AdminComponent,
   
   ],
   imports: [
