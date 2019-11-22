@@ -37,30 +37,7 @@
       <br> -->
 
 
-      <div class="login-box" *ngIf="loginBOX">
-          <button class="close" (click)="CancelarEditar()">&times;</button>
-        <br>
-         <h1 *ngIf="!modificar">Agregar</h1>
-         <h1 *ngIf="modificar">Modificar</h1>
-
-        
-          <div class="input-group mb-3">
-              
-             <input type="email" class="form-control" [(ngModel)]="usuario.email"  placeholder="email@email.com" required >
-          
-          </div>
-          
-          <div class="input-group mb-3">
-         
-            <input  type="text" class="form-control" [(ngModel)]="usuario.clave"  placeholder="password" required>
-  
-        </div>
-         
-            <button class="btn btn-outline-success btn-block" *ngIf="!modificar" (click)="agregarUsuario()">CREAR</button>
-            <button (click)="GuardarEditar()" *ngIf="modificar" class="btn btn-outline-warning" >Guardar</button>
-            <button (click)="CancelarEditar()" *ngIf="modificar" class="btn btn-outline-primary" >Cancelar</button>
-         
-        </div>
+      
 
 
     

@@ -27,6 +27,14 @@ export class LoginComponent implements OnInit {
   datacallback: string;
   respuesta: any;
   datosLogin: Usuario;
+  loginBOX:boolean = false;
+
+  usuarioRegis = {
+    nombre: "",
+    email : "",
+    clave : "",
+    perfil: ""
+  }
 
   // loading = false;
   // submitted = false;
@@ -66,6 +74,15 @@ export class LoginComponent implements OnInit {
   }
 
   get datosForm() { return this.loginForm.controls; }
+
+  agregarUsuario(){
+
+
+   
+    this.baseService.addItem('appTest/Usuarios', this.usuarioRegis); 
+    this.CancelarEditar();
+  }
+
 
   
   login(){
@@ -130,6 +147,18 @@ export class LoginComponent implements OnInit {
     });
   }
 
+  CancelarEditar(){
+    this.loginBOX = false;
+  }
+  loginBOXMuestro(){
+    if(this.loginBOX)
+    {
+      this.loginBOX = false;
+    }
+    else{
+      this.loginBOX = true;
+    }
+  }
 
   LoginAlumno()
 {

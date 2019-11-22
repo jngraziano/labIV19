@@ -21,18 +21,20 @@
             <th  scope="col" class="col2">CUATRIMESTRE</th>
             <th  scope="col" class="col3">PROFESOR</th>
             <th  scope="col" class="col4">CUPOS</th>
-            <!-- <th  scope="col" class="col5">INSCRIPTO</th> -->
+            <th  scope="col" class="col5">NOTA</th>
   
           </tr>
       </thead>
   
           <tbody id="tBodyTable"  *ngFor="let item of listadoMaterias">
-              <tr loscupos [cantidadcupos]="item.cupos"> 
+              <tr > 
 
                     <td>{{item.nombre}}</td>
                     <td>{{item.cuatrimestre}}</td>
                     <td>{{item.nombreProfesor}}</td>
-                    <td>{{item.cupos}}</td>
+                    <td loscupos [cantidadcupos]="item.cupos">{{item.cupos}}</td>
+                    <td *ngFor="let nota of item.listaInscriptos" >{{ nota.nota | colornota}}</td>
+
                     <!-- <td *ngFor="let item of listadoMaterias">
                         <p *ngIf="inscripto">INSCRIPTO</p>
                         <p *ngIf="!inscripto">NO INSCRIPTO</p>
@@ -71,12 +73,12 @@
                 </thead>
             
                     <tbody id="tBodyTable"  *ngFor="let item of listadoMateriasNoInscripto">
-                        <tr loscupos [cantidadcupos]="item.cupos"> 
+                        <tr> 
           
                               <td>{{item.nombre}}</td>
                               <td>{{item.cuatrimestre}}</td>
                               <td>{{item.nombreProfesor}}</td>
-                              <td >{{item.cupos}}</td>
+                              <td loscupos [cantidadcupos]="item.cupos">{{item.cupos}}</td>
                               <!-- <td *ngFor="let item of listadoMaterias">
                                   <p *ngIf="inscripto">INSCRIPTO</p>
                                   <p *ngIf="!inscripto">NO INSCRIPTO</p>

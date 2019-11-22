@@ -14,7 +14,6 @@ export class HeaderComponent implements OnInit {
   usuario : Usuario = new Usuario();
   perfilUsuario: string;
 
-
   constructor(private router: Router) { }
 
   ngOnInit() {
@@ -42,5 +41,7 @@ export class HeaderComponent implements OnInit {
     this.router.navigateByUrl('/login');
     
   }
+
+ 
 
 }

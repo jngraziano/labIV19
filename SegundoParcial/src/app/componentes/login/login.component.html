@@ -1,6 +1,6 @@
 <app-header></app-header>
 <body>
-    <div Temadark class="login-box">
+    <div Temadark class="login-box" >
     <form novalidate [formGroup]="loginForm" (ngSubmit)="login()"  >
        
                   
@@ -27,6 +27,8 @@
         <!-- FIN SPINNER -->
          
           <button type="submit" class="botonIngresar">INGRESAR</button>
+          <button class="btn btn-warning " *ngIf="!IngresoBool" (click)="loginBOXMuestro()">Registrarme</button>
+
           <p *ngIf="error" style="color: white;">Usuario Incorrecto</p>
           <!-- <p *ngIf="success">Usuario Incorrecto</p> -->
          
@@ -45,6 +47,44 @@
       <br>
     </div>
   </div>   
+
+
+  <div class="login-box" *ngIf="loginBOX">
+    <button class="close" (click)="CancelarEditar()">&times;</button>
+  <br>
+   <h1 *ngIf="!modificar">Agregar</h1>
+   <h1 *ngIf="modificar">Modificar</h1>
+
+   <div class="input-group mb-3">
+        
+    <input type="text" class="form-control" [(ngModel)]="usuarioRegis.nombre"  placeholder="Nombre" required >
+ 
+ </div>
+    <div class="input-group mb-3">
+        
+       <input type="email" class="form-control" [(ngModel)]="usuarioRegis.email"  placeholder="email@email.com" required >
+    
+    </div>
+    
+    <div class="input-group mb-3">
+   
+      <input  type="text" class="form-control" [(ngModel)]="usuarioRegis.clave"  placeholder="password" required>
+
+  </div>
+
+        <select class="form-control" [(ngModel)] = "usuarioRegis.tipo">
+            <option selected hidden>Selecciona Tipo</option>
+
+        <option value="administrador">Administrador</option>
+        <option value="profesor">Profesor</option> 
+        <option value="alumno">Alumno</option>
+        </select>
+   
+      <button class="btn btn-outline-success btn-block" *ngIf="!modificar" (click)="agregarUsuario()">CREAR</button>
+      <button (click)="GuardarEditar()" *ngIf="modificar" class="btn btn-outline-warning" >Guardar</button>
+      <button (click)="CancelarEditar()" *ngIf="modificar" class="btn btn-outline-primary" >Cancelar</button>
+   
+  </div>
 
         
         </body>

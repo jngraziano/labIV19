@@ -31,6 +31,7 @@ import { InscripcionComponent } from './componentes/inscripcion/inscripcion.comp
 import { ListaMateriasComponent } from './componentes/lista-materias/lista-materias.component';
 import { ChatComponent } from './componentes/chat/chat.component';
 import { LoscuposDirective } from './directivas/loscupos.directive';
+import { ColornotaPipe } from './pipes/colornota.pipe';
 
 
 
@@ -54,6 +55,7 @@ import { LoscuposDirective } from './directivas/loscupos.directive';
     ListaMateriasComponent,
     ChatComponent,
     LoscuposDirective,
+    ColornotaPipe,
   
   ],
   imports: [

@@ -6,6 +6,7 @@ import { Usuario } from "../../clases/usuario";
 
 import { FirebaseService } from "../../services/firebase.service";
 
+import * as firebase from "firebase";
 
 
 @Component({
@@ -78,22 +79,41 @@ export class AdminComponent implements OnInit {
     this.divOculto = true;
   }
 
-  IngresarUsuario(){
+  IngresarMateria(){
    
 
     console.log(this.registroForm);
 
    
-    let usuarioNuev = new Materia(this.registroForm.get('nombre').value,this.registroForm.get('cuatrimestre').value,
+    let IngresarMateria = new Materia(this.registroForm.get('nombre').value,this.registroForm.get('cuatrimestre').value,
             this.registroForm.get('cupos').value,this.registroForm.get('profesor').value);
-            console.log(usuarioNuev); 
+            console.log(IngresarMateria); 
             this.listaprofesores = [];
-            this.baseService.addItem('appTest/materias', usuarioNuev); 
+            this.baseService.addItem('appTest/materias', IngresarMateria); 
+
+
             // this.usuarioRegistrado = false;
             // this.agregoimagenErrorMsg = false;
             // this.eliminOK = false;
             // this.agregOK = true;
             // localStorage.setItem("ImagenSeleccionada","");
+
+            // let usuarioRegistrado = JSON.parse(sessionStorage.getItem("Usuarios"))
+            // let usuarioConMat = {
+            //   clave: "1234",
+            //   email: "alumno@gmail.com",
+            //   inscriptoBD: false,
+            //   inscriptoLABO4: true,
+            //   inscriptoMS1: false,
+            //   nombre:  "Carlos",
+            //   perfil:  "alumno"
+
+            // }
+
+            // this.baseService.updateItem('appTest/Usuarios',usuarioRegistrado.key, IngresarMateria); 
+
+        
+
 
             this.registroForm.reset();
             this.cerrarX();
