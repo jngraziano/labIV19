@@ -5,7 +5,7 @@ import { Usuario } from "../../clases/usuario";
 import * as firebase from "firebase";
 import { FirebaseService } from "../../services/firebase.service";
 import { Pelicula } from 'src/app/clases/pelicula';
-import { isString } from 'util';
+
 
 
 class ImageSnippet {
@@ -258,31 +258,7 @@ export class UsuarioComponent implements OnInit,AfterViewInit {
 
 
 
-  mostrarBusqueda(peliculaBuscada){
-    console.log(peliculaBuscada);
-    this.isLoading = true;
-    if(peliculaBuscada.nombre == undefined)
-    {
-      this.textopeliculaNoExiste = peliculaBuscada;
-      this.peliculaExiste = [];
-      this.peliculaNoExiste = true;
-    }
-    else{
-      this.peliculaNoExiste = false;
-      this.peliculaExiste.push(peliculaBuscada);
 
-
-      // this.peliculaExiste.nombre = peliculaBuscada.nombre;
-      // this.peliculaExiste.tipo = peliculaBuscada.tipo;
-      // this.peliculaExiste.fechaEstreno = peliculaBuscada.fechaEstreno;
-      // this.peliculaExiste.cantPublic = peliculaBuscada.cantPublic;
-      // this.peliculaExiste.fotoPelicula = peliculaBuscada.fotoPelicula;
-
-    }
-
-    this.isLoading = false;
-    this.peliculaBusqueda = "";
-  }
 
 
 }

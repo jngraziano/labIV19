@@ -1,0 +1,1436 @@
+{
+	"info": {
+		"_postman_id": "68af0db7-0427-4089-8601-1c5eb14d6a3f",
+		"name": "TP XAMPP",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Empleados",
+			"item": [
+				{
+					"name": "Listar cantidad operaciones por sector / empleado",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiIiLCJhdWQiOiIiLCJpYXQiOjE1NDI2NDU4MjcsIm5iZiI6MTU0MjY0NTgyNywiaWQiOjEsIm5vbWJyZSI6IlBhYmxvIiwidXN1YXJpbyI6InBhYmxvIiwicGVyZmlsIjoic29jaW8ifQ.yPIkBJ-cVzfX_Ihmt-xbzf8yZ_qjpgld0W8u661sDt0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "sector",
+									"value": "socio",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/TP/empleado/operacionesSectorEmpleado",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"TP",
+								"empleado",
+								"operacionesSectorEmpleado"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SuspenderEmpleado",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiIiLCJhdWQiOiIiLCJpYXQiOjE1NDI2NDU4MjcsIm5iZiI6MTU0MjY0NTgyNywiaWQiOjEsIm5vbWJyZSI6IlBhYmxvIiwidXN1YXJpbyI6InBhYmxvIiwicGVyZmlsIjoic29jaW8ifQ.yPIkBJ-cVzfX_Ihmt-xbzf8yZ_qjpgld0W8u661sDt0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost/TP/empleado/suspender/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"TP",
+								"empleado",
+								"suspender",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar cantidad operaciones por sector",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiIiLCJhdWQiOiIiLCJpYXQiOjE1NDI2NDU4MjcsIm5iZiI6MTU0MjY0NTgyNywiaWQiOjEsIm5vbWJyZSI6IlBhYmxvIiwidXN1YXJpbyI6InBhYmxvIiwicGVyZmlsIjoic29jaW8ifQ.yPIkBJ-cVzfX_Ihmt-xbzf8yZ_qjpgld0W8u661sDt0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost/TP/empleado/operacionesSector",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"TP",
+								"empleado",
+								"operacionesSector"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LoginEmpleado",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "usuario",
+									"value": "ariel",
+									"type": "text"
+								},
+								{
+									"key": "clave",
+									"value": "12345",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/TP/empleado/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"TP",
+								"empleado",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "BorrarEmpleado",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiIiLCJhdWQiOiIiLCJpYXQiOjE1NDI2NDU4MjcsIm5iZiI6MTU0MjY0NTgyNywiaWQiOjEsIm5vbWJyZSI6IlBhYmxvIiwidXN1YXJpbyI6InBhYmxvIiwicGVyZmlsIjoic29jaW8ifQ.yPIkBJ-cVzfX_Ihmt-xbzf8yZ_qjpgld0W8u661sDt0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost/TP/empleado/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"TP",
+								"empleado",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ListarEmpleados",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiIiLCJhdWQiOiIiLCJpYXQiOjE1NDI2NDU1NzksIm5iZiI6MTU0MjY0NTU3OSwiaWQiOjEsIm5vbWJyZSI6IlBhYmxvIiwidXN1YXJpbyI6InBhYmxvIiwicGVyZmlsIjoic29jaW8ifQ.-i_f9HaBg_oKwLFjNsMdFDSXuAJrGN-rfVggvlMrzWo",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost/TP/empleado/listar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"TP",
+								"empleado",
+								"listar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Lista de Empleados entre fechas Login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiIiLCJhdWQiOiIiLCJpYXQiOjE1NDI2NDU4MjcsIm5iZiI6MTU0MjY0NTgyNywiaWQiOjEsIm5vbWJyZSI6IlBhYmxvIiwidXN1YXJpbyI6InBhYmxvIiwicGVyZmlsIjoic29jaW8ifQ.yPIkBJ-cVzfX_Ihmt-xbzf8yZ_qjpgld0W8u661sDt0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "fecha1",
+									"value": "2018-11-18",
+									"type": "text"
+								},
+								{
+									"key": "fecha2",
+									"value": "2018-11-20",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/TP/empleado/fechasLogin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"TP",
+								"empleado",
+								"fechasLogin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "RegistroEmpleado",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiIiLCJhdWQiOiIiLCJpYXQiOjE1NDI2NDU1NzksIm5iZiI6MTU0MjY0NTU3OSwiaWQiOjEsIm5vbWJyZSI6IlBhYmxvIiwidXN1YXJpbyI6InBhYmxvIiwicGVyZmlsIjoic29jaW8ifQ.-i_f9HaBg_oKwLFjNsMdFDSXuAJrGN-rfVggvlMrzWo",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "nombre",
+									"value": "Ariel",
+									"type": "text"
+								},
+								{
+									"key": "usuario",
+									"value": "arieltraut",
+									"type": "text"
+								},
+								{
+									"key": "clave",
+									"value": "123456",
+									"type": "text"
+								},
+								{
+									"key": "perfil",
+									"value": "socio",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/TP/empleado/registrar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"TP",
+								"empleado",
+								"registrar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ModificarEmpleado",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiIiLCJhdWQiOiIiLCJpYXQiOjE1NDI2NDU4MjcsIm5iZiI6MTU0MjY0NTgyNywiaWQiOjEsIm5vbWJyZSI6IlBhYmxvIiwidXN1YXJpbyI6InBhYmxvIiwicGVyZmlsIjoic29jaW8ifQ.yPIkBJ-cVzfX_Ihmt-xbzf8yZ_qjpgld0W8u661sDt0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "11",
+									"type": "text"
+								},
+								{
+									"key": "nombre",
+									"value": "Alejandra",
+									"type": "text"
+								},
+								{
+									"key": "usuario",
+									"value": "ale",
+									"type": "text"
+								},
+								{
+									"key": "clave",
+									"value": "12345",
+									"type": "text"
+								},
+								{
+									"key": "perfil",
+									"value": "socio",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/TP/empleado/modificar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"TP",
+								"empleado",
+								"modificar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar cantidad operaciones empleado",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"type": "text",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiIiLCJhdWQiOiIiLCJpYXQiOjE1NDI2NDU1NzksIm5iZiI6MTU0MjY0NTU3OSwiaWQiOjEsIm5vbWJyZSI6IlBhYmxvIiwidXN1YXJpbyI6InBhYmxvIiwicGVyZmlsIjoic29jaW8ifQ.-i_f9HaBg_oKwLFjNsMdFDSXuAJrGN-rfVggvlMrzWo"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost/TP/empleado/operacionesEmpleado/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"TP",
+								"empleado",
+								"operacionesEmpleado",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Pedidos",
+			"item": [
+				{
+					"name": "Pedido servido",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiIiLCJhdWQiOiIiLCJpYXQiOjE1NDI3NDIwODMsIm5iZiI6MTU0Mjc0MjA4MywiaWQiOjQsIm5vbWJyZSI6Ikpvc2UiLCJ1c3VhcmlvIjoiam9zZWxpdG8iLCJwZXJmaWwiOiJtb3pvIn0.A-1Yaq34UpcPdDE3o7sjG88dkLJgI-nx7T9ansHWHas",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "codigo",
+									"value": "47cbh",
+									"type": "text"
+								},
+								{
+									"key": "mesa",
+									"value": "mesa03",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/TP/pedido/servirPedido",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"TP",
+								"pedido",
+								"servirPedido"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Consulta de pedido por user",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost/TP/pedido/tiempoRestante/47cbh",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"TP",
+								"pedido",
+								"tiempoRestante",
+								"47cbh"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ListarPedidosCancelados",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"type": "text",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiIiLCJhdWQiOiIiLCJpYXQiOjE1NDI2NjM3MjIsIm5iZiI6MTU0MjY2MzcyMiwiaWQiOjEsIm5vbWJyZSI6IlBhYmxvIiwidXN1YXJpbyI6InBhYmxvIiwicGVyZmlsIjoic29jaW8ifQ.pAEKA-C3hvgFTMHLRGGh1WjryrmqFAIlUkE_e6fDa4M"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost/TP/pedido/listarCancelados",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"TP",
+								"pedido",
+								"listarCancelados"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TomarPedido",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiIiLCJhdWQiOiIiLCJpYXQiOjE1NDI2Njc3NzUsIm5iZiI6MTU0MjY2Nzc3NSwiaWQiOjcsIm5vbWJyZSI6IkVkdWFyZG8iLCJ1c3VhcmlvIjoiZWR1IiwicGVyZmlsIjoiY29jaW5lcm8ifQ.m1NQuhOpoQiwOdxnxTFTrmUe-_GA3E7JJiHhaKx0EB8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "codigo",
+									"value": "47cb",
+									"type": "text"
+								},
+								{
+									"key": "minutosEstimados",
+									"value": "5",
+									"type": "text"
+								},
+								{
+									"key": "mesa",
+									"value": "mesa02",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/TP/pedido/tomarPedido",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"TP",
+								"pedido",
+								"tomarPedido"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CobrarMesa",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"type": "text",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiIiLCJhdWQiOiIiLCJpYXQiOjE1NDI2NzU1ODEsIm5iZiI6MTU0MjY3NTU4MSwiaWQiOjQsIm5vbWJyZSI6Ikpvc2UiLCJ1c3VhcmlvIjoiam9zZWxpdG8iLCJwZXJmaWwiOiJtb3pvIn0.FdmUpWNAzeRL2rZiJxWJ3Wo93RLmkltGsCJxnMluUyA"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "codigoMesa",
+									"value": "mesa03",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/TP/pedido/cobrarPedido",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"TP",
+								"pedido",
+								"cobrarPedido"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Pedidos",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiIiLCJhdWQiOiIiLCJpYXQiOjE1NDM4MDM4OTQsIm5iZiI6MTU0MzgwMzg5NCwiZXhwIjoxNTQzODA3NDk0LCJpZCI6OCwibm9tYnJlIjoiTHVjYXMiLCJ1c3VhcmlvIjoibHVraXRhIiwicGVyZmlsIjoiY29jaW5lcm8ifQ.9z9o0ucoXPibkRIqEKnv27ycQD0aUKwh4zo_Pu1nJ2s",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost/tp/pedido/listarTodos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"tp",
+								"pedido",
+								"listarTodos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar fuera de tiempo",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiIiLCJhdWQiOiIiLCJpYXQiOjE1NDI2NjM3MjIsIm5iZiI6MTU0MjY2MzcyMiwiaWQiOjEsIm5vbWJyZSI6IlBhYmxvIiwidXN1YXJpbyI6InBhYmxvIiwicGVyZmlsIjoic29jaW8ifQ.pAEKA-C3hvgFTMHLRGGh1WjryrmqFAIlUkE_e6fDa4M",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost/TP/pedido/listarFueradeTiempo",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"TP",
+								"pedido",
+								"listarFueradeTiempo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Menos vendido",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"type": "text",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiIiLCJhdWQiOiIiLCJpYXQiOjE1NDI2NjM3MjIsIm5iZiI6MTU0MjY2MzcyMiwiaWQiOjEsIm5vbWJyZSI6IlBhYmxvIiwidXN1YXJpbyI6InBhYmxvIiwicGVyZmlsIjoic29jaW8ifQ.pAEKA-C3hvgFTMHLRGGh1WjryrmqFAIlUkE_e6fDa4M"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost/TP/pedido/menosVendido",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"TP",
+								"pedido",
+								"menosVendido"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AgregarPedido",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiIiLCJhdWQiOiIiLCJpYXQiOjE1NDI2NjE3OTUsIm5iZiI6MTU0MjY2MTc5NSwiaWQiOjQsIm5vbWJyZSI6Ikpvc2UiLCJ1c3VhcmlvIjoiam9zZWxpdG8iLCJwZXJmaWwiOiJtb3pvIn0.dXfYsEuwwOHrCQX0E91NTofuVOeAu5-FXH7ByekT9iU",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id_mesa",
+									"value": "mesa03",
+									"type": "text"
+								},
+								{
+									"key": "pedido",
+									"value": "Milanesa con pure",
+									"type": "text"
+								},
+								{
+									"key": "cantidad",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "importe",
+									"value": "150",
+									"type": "text"
+								},
+								{
+									"key": "cliente",
+									"value": "Juan Gonzalez",
+									"type": "text"
+								},
+								{
+									"key": "sector",
+									"value": "cocina",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/TP/pedido/registrar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"TP",
+								"pedido",
+								"registrar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CancelarPedido",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiIiLCJhdWQiOiIiLCJpYXQiOjE1NDI2NjE3OTUsIm5iZiI6MTU0MjY2MTc5NSwiaWQiOjQsIm5vbWJyZSI6Ikpvc2UiLCJ1c3VhcmlvIjoiam9zZWxpdG8iLCJwZXJmaWwiOiJtb3pvIn0.dXfYsEuwwOHrCQX0E91NTofuVOeAu5-FXH7ByekT9iU",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost/tp/pedido/pnp7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"tp",
+								"pedido",
+								"pnp7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Pedido listo para servir",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"type": "text",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiIiLCJhdWQiOiIiLCJpYXQiOjE1NDI3NDIwODMsIm5iZiI6MTU0Mjc0MjA4MywiaWQiOjQsIm5vbWJyZSI6Ikpvc2UiLCJ1c3VhcmlvIjoiam9zZWxpdG8iLCJwZXJmaWwiOiJtb3pvIn0.A-1Yaq34UpcPdDE3o7sjG88dkLJgI-nx7T9ansHWHas"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "codigo",
+									"value": "dkl78",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/TP/pedido/pedidoListo",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"TP",
+								"pedido",
+								"pedidoListo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Mas vendido",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiIiLCJhdWQiOiIiLCJpYXQiOjE1NDI2NjM3MjIsIm5iZiI6MTU0MjY2MzcyMiwiaWQiOjEsIm5vbWJyZSI6IlBhYmxvIiwidXN1YXJpbyI6InBhYmxvIiwicGVyZmlsIjoic29jaW8ifQ.pAEKA-C3hvgFTMHLRGGh1WjryrmqFAIlUkE_e6fDa4M",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost/TP/pedido/masVendido",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"TP",
+								"pedido",
+								"masVendido"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Mesas",
+			"item": [
+				{
+					"name": "RegistrarMesa",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiIiLCJhdWQiOiIiLCJpYXQiOjE1NDI2NDU4MjcsIm5iZiI6MTU0MjY0NTgyNywiaWQiOjEsIm5vbWJyZSI6IlBhYmxvIiwidXN1YXJpbyI6InBhYmxvIiwicGVyZmlsIjoic29jaW8ifQ.yPIkBJ-cVzfX_Ihmt-xbzf8yZ_qjpgld0W8u661sDt0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "codigo",
+									"value": "mesa06",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/TP/mesas/registrar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"TP",
+								"mesas",
+								"registrar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Mas Facturacion",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"type": "text",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiIiLCJhdWQiOiIiLCJpYXQiOjE1NDI2NDU4MjcsIm5iZiI6MTU0MjY0NTgyNywiaWQiOjEsIm5vbWJyZSI6IlBhYmxvIiwidXN1YXJpbyI6InBhYmxvIiwicGVyZmlsIjoic29jaW8ifQ.yPIkBJ-cVzfX_Ihmt-xbzf8yZ_qjpgld0W8u661sDt0"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost/TP/mesas/masFacturacion",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"TP",
+								"mesas",
+								"masFacturacion"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ListarMesas",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiIiLCJhdWQiOiIiLCJpYXQiOjE1NDI2NDU4MjcsIm5iZiI6MTU0MjY0NTgyNywiaWQiOjEsIm5vbWJyZSI6IlBhYmxvIiwidXN1YXJpbyI6InBhYmxvIiwicGVyZmlsIjoic29jaW8ifQ.yPIkBJ-cVzfX_Ihmt-xbzf8yZ_qjpgld0W8u661sDt0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost/TP/mesas/listar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"TP",
+								"mesas",
+								"listar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Mas usada",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiIiLCJhdWQiOiIiLCJpYXQiOjE1NDI2NDU4MjcsIm5iZiI6MTU0MjY0NTgyNywiaWQiOjEsIm5vbWJyZSI6IlBhYmxvIiwidXN1YXJpbyI6InBhYmxvIiwicGVyZmlsIjoic29jaW8ifQ.yPIkBJ-cVzfX_Ihmt-xbzf8yZ_qjpgld0W8u661sDt0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost/TP/mesas/masUsada",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"TP",
+								"mesas",
+								"masUsada"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Mejor puntuacion",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiIiLCJhdWQiOiIiLCJpYXQiOjE1NDI2NDU4MjcsIm5iZiI6MTU0MjY0NTgyNywiaWQiOjEsIm5vbWJyZSI6IlBhYmxvIiwidXN1YXJpbyI6InBhYmxvIiwicGVyZmlsIjoic29jaW8ifQ.yPIkBJ-cVzfX_Ihmt-xbzf8yZ_qjpgld0W8u661sDt0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost/TP/mesas/mejorPuntuacion",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"TP",
+								"mesas",
+								"mejorPuntuacion"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Menos usada",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"type": "text",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiIiLCJhdWQiOiIiLCJpYXQiOjE1NDI2NDU4MjcsIm5iZiI6MTU0MjY0NTgyNywiaWQiOjEsIm5vbWJyZSI6IlBhYmxvIiwidXN1YXJpbyI6InBhYmxvIiwicGVyZmlsIjoic29jaW8ifQ.yPIkBJ-cVzfX_Ihmt-xbzf8yZ_qjpgld0W8u661sDt0"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost/TP/mesas/menosUsada",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"TP",
+								"mesas",
+								"menosUsada"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ActualizarFotoMesa",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiIiLCJhdWQiOiIiLCJpYXQiOjE1NDI2NDU4MjcsIm5iZiI6MTU0MjY0NTgyNywiaWQiOjEsIm5vbWJyZSI6IlBhYmxvIiwidXN1YXJpbyI6InBhYmxvIiwicGVyZmlsIjoic29jaW8ifQ.yPIkBJ-cVzfX_Ihmt-xbzf8yZ_qjpgld0W8u661sDt0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "codigo",
+									"value": "mesa04",
+									"type": "text"
+								},
+								{
+									"key": "foto",
+									"type": "file",
+									"src": ""
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/TP/mesas/foto",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"TP",
+								"mesas",
+								"foto"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Peor Puntuacion",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"type": "text",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiIiLCJhdWQiOiIiLCJpYXQiOjE1NDI2NDU4MjcsIm5iZiI6MTU0MjY0NTgyNywiaWQiOjEsIm5vbWJyZSI6IlBhYmxvIiwidXN1YXJpbyI6InBhYmxvIiwicGVyZmlsIjoic29jaW8ifQ.yPIkBJ-cVzfX_Ihmt-xbzf8yZ_qjpgld0W8u661sDt0"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost/TP/mesas/peorPuntuacion",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"TP",
+								"mesas",
+								"peorPuntuacion"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Mayor importe",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiIiLCJhdWQiOiIiLCJpYXQiOjE1NDI2NjM3MjIsIm5iZiI6MTU0MjY2MzcyMiwiaWQiOjEsIm5vbWJyZSI6IlBhYmxvIiwidXN1YXJpbyI6InBhYmxvIiwicGVyZmlsIjoic29jaW8ifQ.pAEKA-C3hvgFTMHLRGGh1WjryrmqFAIlUkE_e6fDa4M",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost/TP/mesas/mayorImporte",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"TP",
+								"mesas",
+								"mayorImporte"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cerrar Mesa",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"type": "text",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiIiLCJhdWQiOiIiLCJpYXQiOjE1NDM4ODUwNDQsIm5iZiI6MTU0Mzg4NTA0NCwiZXhwIjoxNTQzODg4NjQ0LCJpZCI6OCwibm9tYnJlIjoiTHVjYXMiLCJ1c3VhcmlvIjoibHVraXRhIiwicGVyZmlsIjoiY29jaW5lcm8ifQ.IQPR6IKz12fAybaGIJGZfa3kpszSQUMlDrD5ksQIw4M"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost/TP/mesas/cerrar/mesa03",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"TP",
+								"mesas",
+								"cerrar",
+								"mesa03"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Menor importe",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiIiLCJhdWQiOiIiLCJpYXQiOjE1NDI2NDU4MjcsIm5iZiI6MTU0MjY0NTgyNywiaWQiOjEsIm5vbWJyZSI6IlBhYmxvIiwidXN1YXJpbyI6InBhYmxvIiwicGVyZmlsIjoic29jaW8ifQ.yPIkBJ-cVzfX_Ihmt-xbzf8yZ_qjpgld0W8u661sDt0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost/TP/mesas/menorImporte",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"TP",
+								"mesas",
+								"menorImporte"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "BorrarMesa",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiIiLCJhdWQiOiIiLCJpYXQiOjE1NDI2NDU4MjcsIm5iZiI6MTU0MjY0NTgyNywiaWQiOjEsIm5vbWJyZSI6IlBhYmxvIiwidXN1YXJpbyI6InBhYmxvIiwicGVyZmlsIjoic29jaW8ifQ.yPIkBJ-cVzfX_Ihmt-xbzf8yZ_qjpgld0W8u661sDt0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost/TP/mesas/mesa06",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"TP",
+								"mesas",
+								"mesa06"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Menos facturacion",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"type": "text",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiIiLCJhdWQiOiIiLCJpYXQiOjE1NDI2NDU4MjcsIm5iZiI6MTU0MjY0NTgyNywiaWQiOjEsIm5vbWJyZSI6IlBhYmxvIiwidXN1YXJpbyI6InBhYmxvIiwicGVyZmlsIjoic29jaW8ifQ.yPIkBJ-cVzfX_Ihmt-xbzf8yZ_qjpgld0W8u661sDt0"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost/TP/mesas/menosFacturacion",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"TP",
+								"mesas",
+								"menosFacturacion"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Facturacion mesa entre fechas",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"type": "text",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiIiLCJhdWQiOiIiLCJpYXQiOjE1NDI2NDU4MjcsIm5iZiI6MTU0MjY0NTgyNywiaWQiOjEsIm5vbWJyZSI6IlBhYmxvIiwidXN1YXJpbyI6InBhYmxvIiwicGVyZmlsIjoic29jaW8ifQ.yPIkBJ-cVzfX_Ihmt-xbzf8yZ_qjpgld0W8u661sDt0"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "fecha1",
+									"value": "2018-12-01",
+									"type": "text"
+								},
+								{
+									"key": "fecha2",
+									"value": "2018-12-03",
+									"type": "text"
+								},
+								{
+									"key": "codigoMesa",
+									"value": "mesa02",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/TP/mesas/facturacionEntreFechas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"TP",
+								"mesas",
+								"facturacionEntreFechas"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Encuesta",
+			"item": [
+				{
+					"name": "ListarEncuesta",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiIiLCJhdWQiOiIiLCJpYXQiOjE1NDI2NDU4MjcsIm5iZiI6MTU0MjY0NTgyNywiaWQiOjEsIm5vbWJyZSI6IlBhYmxvIiwidXN1YXJpbyI6InBhYmxvIiwicGVyZmlsIjoic29jaW8ifQ.yPIkBJ-cVzfX_Ihmt-xbzf8yZ_qjpgld0W8u661sDt0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost/TP/encuesta/listar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"TP",
+								"encuesta",
+								"listar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "RegistrarEncuesta",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "puntuacionMesa",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "codigoMesa",
+									"value": "mesa02",
+									"type": "text"
+								},
+								{
+									"key": "puntuacionRestaurante",
+									"value": "4",
+									"type": "text"
+								},
+								{
+									"key": "puntuacionMozo",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "puntuacionCocinero",
+									"value": "4",
+									"type": "text"
+								},
+								{
+									"key": "comentario",
+									"value": "Un desastre la mesa.",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/TP/encuesta/registrar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"TP",
+								"encuesta",
+								"registrar"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Facturacion",
+			"item": [
+				{
+					"name": "PDF",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiIiLCJhdWQiOiIiLCJpYXQiOjE1NDI2NDU4MjcsIm5iZiI6MTU0MjY0NTgyNywiaWQiOjEsIm5vbWJyZSI6IlBhYmxvIiwidXN1YXJpbyI6InBhYmxvIiwicGVyZmlsIjoic29jaW8ifQ.yPIkBJ-cVzfX_Ihmt-xbzf8yZ_qjpgld0W8u661sDt0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost/TP/facturas/listarPDF",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"TP",
+								"facturas",
+								"listarPDF"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Excel",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"type": "text",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiIiLCJhdWQiOiIiLCJpYXQiOjE1NDI2NDU4MjcsIm5iZiI6MTU0MjY0NTgyNywiaWQiOjEsIm5vbWJyZSI6IlBhYmxvIiwidXN1YXJpbyI6InBhYmxvIiwicGVyZmlsIjoic29jaW8ifQ.yPIkBJ-cVzfX_Ihmt-xbzf8yZ_qjpgld0W8u661sDt0"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost/TP/facturas/listarExcel",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"TP",
+								"facturas",
+								"listarExcel"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

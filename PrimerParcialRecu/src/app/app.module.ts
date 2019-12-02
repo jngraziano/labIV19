@@ -19,6 +19,12 @@ import {HttpModule} from '@angular/http';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BusquedaComponent } from './componentes/busqueda/busqueda.component';
+import { BienvenidoComponent } from './componentes/bienvenido/bienvenido.component';
+import { AltaPeliculasComponent } from './componentes/alta-peliculas/alta-peliculas.component';
+import { ActoraltaComponent } from './componentes/actoralta/actoralta.component';
+import { PaginaBusquedaComponent } from './componentes/pagina-busqueda/pagina-busqueda.component';
+import { ListadoDeActoresComponent } from './componentes/listado-de-actores/listado-de-actores.component';
+import { ModificarComponent } from './componentes/modificar/modificar.component';
 
 
 
@@ -32,6 +38,12 @@ import { BusquedaComponent } from './componentes/busqueda/busqueda.component';
     LoginComponent,
     UsuarioListadoComponent,
     BusquedaComponent,
+    BienvenidoComponent,
+    AltaPeliculasComponent,
+    ActoraltaComponent,
+    PaginaBusquedaComponent,
+    ListadoDeActoresComponent,
+    ModificarComponent,
   
   ],
   imports: [

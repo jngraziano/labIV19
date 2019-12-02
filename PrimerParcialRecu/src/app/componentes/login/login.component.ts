@@ -35,31 +35,29 @@ export class LoginComponent implements OnInit {
   login(){
     // this.spinner = true; 
 
-    this.router.navigateByUrl('/usuario'); 
+    // this.router.navigateByUrl('/usuario'); 
 
-    // this.baseService.getItems("appTest/Usuarios").then(users => {
-    //   // setTimeout(() => this.spinner = false, 4000);
+    this.baseService.getItems("appTest/Usuarios").then(users => {
+      // setTimeout(() => this.spinner = false, 4000);
      
    
-    //   this.usuarios = users;
+      this.usuarios = users;
 
-    //   let usuarioLogueado = this.usuarios.find(elem => (elem.email == this.usuario.email && elem.clave == this.usuario.clave));
-    //   console.log(usuarioLogueado);
+      let usuarioLogueado = this.usuarios.find(elem => (elem.usuario == this.usuario.usuario && elem.clave == this.usuario.clave));
+      console.log(usuarioLogueado);
     
-    //   if (usuarioLogueado !== undefined) {
-    //     this.error = false;
-    //     this.success = true;
-    //     sessionStorage.setItem('Usuarios', JSON.stringify(usuarioLogueado));
+      if (usuarioLogueado !== undefined) {
+        this.error = false;
+        this.success = true;
+        sessionStorage.setItem('Usuarios', JSON.stringify(usuarioLogueado));
 
-
-        
-    //     this.router.navigateByUrl('/usuario'); 
+        this.router.navigateByUrl('/bienvenido'); 
        
-    //   }
-    //   else{
-    //     this.error = true;
-    //   }
-    // });
+      }
+      else{
+        this.error = true;
+      }
+    });
   }
 
 }

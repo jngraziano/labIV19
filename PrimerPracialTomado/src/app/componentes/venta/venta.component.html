@@ -1,0 +1,27 @@
+<div class="container">
+        <div class="row">
+          <div class="col-8">
+            <!-- <p>Email</p>
+            <input type="text" [(ngModel)]="usuario.email">
+            <p>Password</p>
+            <input type="text" [(ngModel)]="usuario.password">
+            <br>
+            <br>
+            <button (click)="AgregarUsuario()" *ngIf="!editar">Agregar</button>
+            <button (click)="GuardarEditar()" *ngIf="editar">Guardar</button>
+            <button (click)="CancelarEditar()" *ngIf="editar">Cancelar</button>
+            <br>
+            <br>
+            <button (click)="CambiarVista('grilla')" *ngIf="vista == 'lista'">Ver Grilla</button>
+            <button (click)="CambiarVista('lista')"  *ngIf="vista == 'grilla'">Ver Listado</button> -->
+          </div>
+          <div class="col-8" style="margin-top: 30px">
+            <!-- <h1 *ngIf="vista == 'grilla'">Grilla Usuarios</h1> -->
+            <app-grilla-ventas [listadoProductos]="productos" [listadoVentas]="ventas"></app-grilla-ventas>
+          </div>
+        </div>
+            <div>
+            <button id="btnAltaRoute" type="button" style="margin-right:1%;" class="btn btn-success pull-right" (click)="AgregarVentaClick()"> Agregar </button>
+        </div>
+      
+      </div>

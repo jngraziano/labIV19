@@ -1,0 +1,27 @@
+<table class="table table-bordered table-striped table-hover">
+  <!-- style="width:50%"> -->
+  <tr>
+    <th>ID</th>
+    <th>Descripcion</th>
+    <th>Tipo</th>
+    <th>Vencimiento</th>
+    <th>Precio</th>
+    <th>Foto</th>
+  </tr>
+  <tr *ngFor="let producto of listadoProductos" >
+      <td>{{producto.id}}</td>
+      <td>{{producto.descripcion}}</td>
+      <td>{{producto.tipo}}</td>
+      <td>{{producto.fechaDeVencimiento}}</td>
+      <td>{{producto.precio}}</td>
+      <td><img src="{{producto.rutaDeFoto}}" alt="" style="width: 70px"></td>
+      <!-- <td><button (click)="Editar(usuario)">Editar</button></td>-->
+      <td>
+        <app-btn-borrar [idProducto] = "producto.id" (borrado)="RefrescarLista($event)"></app-btn-borrar>
+      </td>
+      <td>
+        <button id="btnMofificar" type="button" class="btn btn-primary pull-right" (click)="IrAModificarClick(producto)">Modificar</button>
+      </td>
+  </tr>
+
+</table>

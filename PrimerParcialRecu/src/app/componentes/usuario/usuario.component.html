@@ -11,22 +11,7 @@
 <body>
 
       
-          <div *ngFor="let item of peliculaExiste">
-            <p>{{item.nombre}}</p>
-            <p>{{item.tipo}}</p>
-            <p>{{item.fechaEstreno}}</p>
-            <p>{{item.cantPublic}}</p>
-            <img [src]="item.fotoPelicula" class="img-thumbnail" style="height: 80px;width: 80px;">
-
-
-
-          </div>
-
-          <div *ngIf="peliculaNoExiste">
-              {{textopeliculaNoExiste}}
-
-          </div>
-
+         
 
 
 
@@ -38,22 +23,17 @@
                       <a class="navbar-brand" style="color:white" (click)="MuestroTabla()" >Listado de Peliculas</a>
               </div>
                     
-              <div class="input-group mb-3">
-              
-                <input type="text" class="form-control" [(ngModel)]="peliculaBusqueda"  placeholder="Ingrese nombre a buscar" required >
              
-             </div>
-             <app-busqueda (lanzador)="mostrarBusqueda($event)" [peliculaBusqueda]="peliculaBusqueda"> </app-busqueda>
-            <button class="btn btn-outline-success" (click)=MuestroLoginBOX()>Agregar pelicula
+            <!-- <button class="btn btn-outline-success" (click)=MuestroLoginBOX()>Agregar pelicula
               <i class="glyphicon glyphicon-plus"></i>
-            </button>
+            </button> -->
             </div>
         </nav>
         
       <br>
 
 
-      <div class="login-box" *ngIf="loginBOX">
+      <!-- <div class="login-box" *ngIf="loginBOX">
           <button class="close" (click)="CancelarEditar()">&times;</button>
         <br>
          <h1 *ngIf="!modificar">Agregar</h1>
@@ -91,7 +71,7 @@
              accept="image/*"
 
              (change)="processFile(imageInput)">
-  <!-- <p letraYcolor *ngIf="agregoimagenErrorMsg" class="faltaIMG">Debe ingresar imagen</p> -->
+
   
     </label>
   </div>  
@@ -100,7 +80,7 @@
             <button (click)="CancelarEditar()" *ngIf="modificar" class="btn btn-outline-primary" >Cancelar</button>
          
         </div>
-
+ -->
 
     
       <!-- CREO TABLA -->

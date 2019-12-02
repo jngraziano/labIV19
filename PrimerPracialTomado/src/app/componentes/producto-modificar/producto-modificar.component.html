@@ -1,0 +1,49 @@
+<p>producto-modificar works!</p>
+
+<div class="container">
+  <div class="row">
+    <div class="col-8">
+      <div class="card">
+        <article class="card-body">
+            <h4 class="card-title mb-3 lblIng">Ingreso de Productos</h4>
+        <form>
+            <div class="form-group">
+                <label>Descripcion</label>
+                <input class="form-control" placeholder={{producto.descripcion}} [(ngModel)]="producto.descripcion" name="descripcion">
+                <label *ngIf="descError" class="form-text text-danger">Falta descripcion</label>
+            </div>
+            <div class="form-group">
+                    <label>Tipo</label>
+                    <select class="form-control" [(ngModel)]="producto.tipo" name="tipo">
+                        <option value="null" selected>Seleccione un tipo..</option>
+                        <option value="solido">Solido</option>
+                        <option value="liquido">Liquido</option>
+                    </select>
+                <label *ngIf="tipoError" class="form-text text-danger">Falta seleccionar un tipo</label>
+            </div>
+            <div class="form-group">
+                <label>Fecha de Vencimiento</label>
+                <input class="form-control" type="date" placeholder="Ingrese una fecha de vencimiento.." [(ngModel)]="producto.fechaDeVencimiento" name="fechaDeVencimiento">
+                <label *ngIf="fechaDeVencError" class="form-text text-danger">Falta ingresar la fecha de vencimiento</label>
+            </div>
+            <div class="form-group">
+                <label>Precio</label>
+                <input class="form-control" type="number" placeholder={{producto.precio}} [(ngModel)]="producto.precio" name="precio">
+                <label *ngIf="precioError" class="form-text text-danger">Falta ingresar precio</label>
+            </div>
+            <button id="btnModificar" type="button" style="margin-right:1%;" class="btn btn-success pull-right" (click)="Modificar()"> Modificar </button>
+            <button id="btnLimpiar" type="reset" class="btn btn-info" (click)="ReestablecerTodo()"> Limpiar </button>
+            </form>
+        </article>
+      </div>
+    </div>
+    <div class="col-8">
+      <div>
+         <button id="btnAltaRoute" type="button" style="margin-top:3%;" class="btn btn-success pull-right" (click)="VolverAProductosClick()"> Volver a Productos </button>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+

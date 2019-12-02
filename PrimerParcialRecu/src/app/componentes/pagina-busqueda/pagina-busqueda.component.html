@@ -1,0 +1,28 @@
+<header>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</header>
+
+<div *ngFor="let item of peliculaExiste">
+                <p>{{item.nombre}}</p>
+                <p>{{item.tipo}}</p>
+                <p>{{item.fechaEstreno}}</p>
+                <p>{{item.cantPublic}}</p>
+                <img [src]="item.fotoPelicula" class="img-thumbnail" style="height: 80px;width: 80px;">
+    
+    
+    
+              </div>
+    
+              <div *ngIf="peliculaNoExiste">
+                  {{textopeliculaNoExiste}}
+    
+              </div>
+
+              
+<div class="input-group mb-3">
+              
+        <input type="text" class="form-control" [(ngModel)]="peliculaBusqueda"  placeholder="Ingrese nombre a buscar" required >
+     
+     </div>
+     <app-busqueda (lanzador)="mostrarBusqueda($event)" [peliculaBusqueda]="peliculaBusqueda"> </app-busqueda>

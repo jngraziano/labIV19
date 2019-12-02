@@ -8,12 +8,12 @@
           
           <div class="textbox" *ngIf="!spinner">
             <!-- <ion-icon  name="contact"></ion-icon> -->
-            <input type="email"  [(ngModel)]="usuario.email"  placeholder="email@email.com" >
+            <input type="email"  [(ngModel)]="usuario.usuario"  placeholder="cliente" >
           </div>
         
           <div class="textbox" *ngIf="!spinner">
             <!-- <ion-icon *ngIf="!spinner" name="lock"></ion-icon> -->
-            <input  type="password" [(ngModel)]="usuario.clave"  placeholder="password" >
+            <input  type="password" [(ngModel)]="usuario.clave"  placeholder="654321" >
           </div>
         
           <div id="buttons" *ngIf="!spinner">

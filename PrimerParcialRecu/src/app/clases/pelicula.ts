@@ -1,3 +1,5 @@
+import { Actor } from "../clases/actor";
+
 export class Pelicula {
 
 
@@ -7,7 +9,7 @@ export class Pelicula {
     fechaEstreno: string;
     cantPublic: number;
     fotoPelicula: string;
-
+    estrella : Actor;
     // constructor(){
     //     this.id = this.id+1;
     // }
